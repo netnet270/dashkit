@@ -6,7 +6,9 @@
   var menus = [
     {
       title: "Dashboards", 
-      icon: 'fa-brands-400.svg',
+      icon: "fe fe-home",
+      href: "#sidebarDashboards",
+      id: "sidebarDashboards",
       active: true,
       submenu: [
         {
@@ -20,10 +22,14 @@
     },
     { 
       title: "Pages",
-      icon: 'fa-brands-400.svg',
+      icon: 'fe fe-file',
+      href: "#sidebarPages",
+      id: "sidebarPages",
       submenu: [
         {
           title: 'Profile',
+          href: "#sidebarProfile",
+          id: "sidebarProfile",
           childmenu: [
             {
               title: 'Posts'
@@ -44,6 +50,8 @@
         }, 
         {
           title:'Project',
+          href: "#sidebarProject",
+          id: "sidebarProject",
           childmenu: [
             {
               title: 'Overview'
@@ -61,6 +69,8 @@
         }, 
         {
           title:'Team',
+          href: "#sidebarTeam",
+          id: "sidebarTeam",
           childmenu: [
             {
               title: 'Overview'
@@ -95,11 +105,14 @@
     },
     {
       title: "Authentication",
-      icon: 'fa-brands-400.svg',
+      icon: 'fe fe-user',
+      href: "#sidebarAuth",
+      id: "sidebarAuth",
       submenu: [
         {
           title: 'Sign in',
-           childmenu: [
+          href: "#sidebarSignIn",
+          childmenu: [
             {
               title: 'Cover'
             },
@@ -113,7 +126,9 @@
         }, 
         {
           title:'Sign up',
-           childmenu: [
+          href: "#sidebarSignUp",
+          id: "sidebarSignUp",
+          childmenu: [
             {
               title: 'Cover'
             },
@@ -127,7 +142,9 @@
         },
         {
           title:'Password reset',
-           childmenu: [
+          href: "#sidebarPassword",
+          id: "sidebarPassword",
+          childmenu: [
             {
               title: 'Cover'
             },
@@ -141,7 +158,9 @@
         },
         {
           title:'Error',
-           childmenu: [
+          href: "#sidebarError",
+          id: "sidebarError",
+          childmenu: [
             {
               title: 'Cover'
             },
@@ -154,18 +173,58 @@
           ]
         }
       ]
+    },
+    {
+      title: "Notifications",
+      icon: 'fe fe-bell',
+      href: "#sidebarModalActivity",
+      id: "sidebarModalActivity",
+      toggle:"modal"
     }
   ]
 
 mixin main-menu()
   ul.navbar-nav
     each item in menus
-      li.navbar-item.js-menu-item(class=item.submenu ? 'main-menu__item--has-children' : '', class=item.active ? 'main-menu__item--active' : '')
-        a.navbar-link.js-menulink(href= href ? href : "#")= item.title
-        if item.submenu 
-          ul.sub-menu.js-submenu
+      li.navbar-item.js-navbar-item(
+        class=item.submenu ? 'navbar-item--has-children' : '', 
+        class=item.active ? 'active' : ''
+      )
+        a.navbar-link.js-navbar-link(
+          href= item.href ? item.href : "#", 
+          data-toggle= item.toggle ? "modal" : "collapse", 
+          role ="button", 
+          aria-expanded ="false", 
+          aria-controls= item.id
+        )
+          i(class= item.icon)
+          |#{item.title}
+          
+        if item.submenu
+          .collapse(id= item.id)
+          ul.nav.nav-sm.flex-column.js-submenu
             each sub in item.submenu
-              li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
-                a.main-menu__link(href= href ? href : "#")= sub.title
+              li.nav-item.js-sub-item(
+                class=sub.childmenu ? 'navbar-item--has-children' : '',
+                class= sub.active ? 'active' : ''
+              )
+                a.nav-link(
+                  href= item.href ? item.href : "#", 
+                  data-toggle= "collapse", 
+                  role ="button", 
+                  aria-expanded ="false", 
+                  aria-controls= item.id
+                )= sub.title
+
+                if sub.childmenu
+                  .collapse(id= sub.id)
+                    ul.nav.nav-sm.flex-column.js-submenu
+                      each child in sub.childmenu
+                        li.nav-item.js-sub-item(
+                          class= child.active ? 'active' : ''
+                        )
+                          a.nav-link(
+                            href= item.href ? item.href : "#", 
+                          )= child.title
                           
                                                     
