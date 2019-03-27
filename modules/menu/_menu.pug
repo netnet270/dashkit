@@ -1,0 +1,171 @@
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+
+-
+  var menus = [
+    {
+      title: "Dashboards", 
+      icon: 'fa-brands-400.svg',
+      active: true,
+      submenu: [
+        {
+          title: 'Default'
+        },
+        {
+          title: 'Alternative',
+          badge: 'New'
+        }
+      ]
+    },
+    { 
+      title: "Pages",
+      icon: 'fa-brands-400.svg',
+      submenu: [
+        {
+          title: 'Profile',
+          childmenu: [
+            {
+              title: 'Posts'
+            },
+            {
+              title: 'Groups'
+            },
+            {
+              title: 'Groups'
+            },
+            {
+              title: 'Groups'
+            },
+            {
+              title: 'Groups'
+            }
+          ]
+        }, 
+        {
+          title:'Project',
+          childmenu: [
+            {
+              title: 'Overview'
+            },
+            {
+              title: 'Files'
+            },
+            {
+              title: 'Reports'
+            },
+            {
+              title: 'New project'
+            }
+          ]
+        }, 
+        {
+          title:'Team',
+          childmenu: [
+            {
+              title: 'Overview'
+            },
+            {
+              title: 'Projects'
+            },
+            {
+              title: 'Members'
+            },
+            {
+              title: 'New team'
+            }
+          ]
+        },
+        {
+          title:'Orders'
+        }, 
+         {
+          title:'Feed'
+        }, 
+         {
+          title:'Settings'
+        }, 
+         {
+          title:'Invoicers'
+        }, 
+         {
+          title:'Pricing'
+        }
+      ]
+    },
+    {
+      title: "Authentication",
+      icon: 'fa-brands-400.svg',
+      submenu: [
+        {
+          title: 'Sign in',
+           childmenu: [
+            {
+              title: 'Cover'
+            },
+            {
+              title: 'Illustration'
+            },
+            {
+              title: 'Basic'
+            }
+          ]
+        }, 
+        {
+          title:'Sign up',
+           childmenu: [
+            {
+              title: 'Cover'
+            },
+            {
+              title: 'Illustration'
+            },
+            {
+              title: 'Basic'
+            }
+          ]
+        },
+        {
+          title:'Password reset',
+           childmenu: [
+            {
+              title: 'Cover'
+            },
+            {
+              title: 'Illustration'
+            },
+            {
+              title: 'Basic'
+            }
+          ]
+        },
+        {
+          title:'Error',
+           childmenu: [
+            {
+              title: 'Cover'
+            },
+            {
+              title: 'Illustration'
+            },
+            {
+              title: 'Basic'
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+mixin main-menu()
+  ul.navbar-nav
+    each item in menus
+      li.navbar-item.js-menu-item(class=item.submenu ? 'main-menu__item--has-children' : '', class=item.active ? 'main-menu__item--active' : '')
+        a.navbar-link.js-menulink(href= href ? href : "#")= item.title
+        if item.submenu 
+          ul.sub-menu.js-submenu
+            each sub in item.submenu
+              li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
+                a.main-menu__link(href= href ? href : "#")= sub.title
+                          
+                                                    

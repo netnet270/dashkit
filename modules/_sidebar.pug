@@ -1,0 +1,84 @@
+//-------------------------------------------------------
+//- Modules :: Sidebar
+//-------------------------------------------------------
+
+mixin sidebar()
+  nav.navbar.navbar-vertical.navbar-expand-lg.navbar-light.bg-light
+
+    button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#collapsibleNavId', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+
+    a.navbar-brand(href='#')
+      h1
+        img(src='./images/logo.svg', alt='logo-main')
+    
+    .navbar-user.d-md-none.js-dropdown
+      .navbar-user__avatar.js-dropdown-toggle
+        img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
+
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+
+
+  button.left-sidebar__toggle.js-btn-toggle
+    i(class="fas fa-bars")
+      
+    .logo
+      a.logo__link(href='#')
+        h1
+          img(src="./images/logo.svg", alt="logo-main")
+   
+    .left-sidebar__collapse.js-sidebar-collapse
+    
+      form.search-form
+        input.search-form__field(type="text", placeholder="Search...")
+        button.search-form__icon
+          i(class="fas fa-search")
+
+      .main-menu
+        .main-menu__dashboards
+          h3.main-menu__header dashboards
+          ul.main-menu__list
+            -
+              var datas = [
+                {
+                  title: 'Overview',
+                  active: true
+                },
+                {
+                  title: 'Order history'
+                },
+                {
+                  title: 'Fluid layout'
+                },
+                {
+                  title: 'Icon nav'
+                }
+              ]
+            each item in datas
+              li.main-menu__item(class= item.active ? 'main-menu__item--active':'')
+                a.main-menu__link(href='#')= item.title
+
+        .main-menu__more
+          h3.main-menu__header more
+          ul.main-menu__list
+            -
+              var datas = [
+                {
+                  title: 'Toolkit docs'
+                },
+                {
+                  title: 'Bootstrap docs'
+                },
+                {
+                  title: 'Light UI'
+                },
+                {
+                  title: 'Example modal'
+                }
+              ]
+            each item in datas
+              li.main-menu__item
+                a.main-menu__link(href='#')=item.title
+           
+    hr.left-sidebar__line

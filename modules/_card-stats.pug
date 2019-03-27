@@ -1,0 +1,20 @@
+//-------------------------------------------------------
+//- Modules :: card stats
+//-------------------------------------------------------
+
+mixin card-stats({title, number, indicator, increase, dataset})
+  .card 
+    .card__body 
+      .card__title= title
+      .card__data
+        span.card__number= number
+        span.card__indicator(class = increase ? 'card__indicator--increase' :'card__indicator--decrease' )= indicator
+      hr.card__line
+
+    .card__footer
+      canvas.card__chart-canvas.js-stats-canvas(
+        width="378"
+        height="94"
+        data-chart="line"
+        data-dataset= dataset
+      )
