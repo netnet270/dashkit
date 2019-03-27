@@ -1,9 +1,27 @@
 
 @font-face {
-  font-family: 'Material Icons';
+  font-family: 'Cerebri Sans',sans-serif;
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Material-Icons.woff2") format('woff2');
+  src: 
+    url("../fonts/cerebrisans-medium.woff") format('woff'), 
+    url("../fonts/cerebrisans-medium.ttf") format('ttf'),
+    url("../fonts/cerebrisans-medium.eof") format('eof'), 
+    url("../fonts/cerebrisans-regular.woff") format('woff'), 
+    url("../fonts/cerebrisans-regular.ttf") format('ttf'),
+    url("../fonts/cerebrisans-regular.eof") format('eof'), 
+    url("../fonts/cerebrisans-semibold.woff") format('woff'), 
+    url("../fonts/cerebrisans-semibold.ttf") format('ttf'),
+    url("../fonts/cerebrisans-semibold.eof") format('eof'),  
+}
+
+@font-face {
+  font-family: Feather;
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    url("../fonts/Feather.woff") format('woff'), 
+    url("../fonts/Feather.ttf") format('ttf'),
 }
 
 @font-face {

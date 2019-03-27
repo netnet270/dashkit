@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 
 //Fonts
-$font-family-base:"Roboto",sans-serif;
+$font-family-base:"Feather";
 $font-family-icons: 'Font Awesome 5 Free';
 
 //Font-size
@@ -18,7 +18,33 @@ $font-size-xlarge: 24px;
 $font-weight-small: 300;
 $font-weight-normal: 400;
 
+//Line-height
+$line-height-base: 1.2;
+$line-height-normal: 1.5;
+
+//Font-weight
+$font-weight-base: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
 
 //Color 
 $cl-white: #fff;
 
+// Borders
+$border-radius-base: 8px;
+$border-radius-small: 3px;
+$border-radius-hack: 100px;
+
+//Border Color
+$border-light-green: #c7d8b6;
+$border-light-pink: #fbc3cd;
+$border-light-blue: #b2d5ed;
+$border-gray: #afafaf;
+$border-light-gray: #e3e3e3;
+
+//Background
+$bg-light-green: #ebf9ef;
+$bg-light-pink: #fef0f3;
+$bg-light-blue: #f5fbff;
+$bg-light-gray: #f5f5f5;

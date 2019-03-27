@@ -3,25 +3,75 @@
 //-------------------------------------------------------
 
 mixin sidebar()
-  nav.navbar.navbar-vertical.navbar-expand-md.navbar-light
+  .left-sidebar
+    nav.navbar.left-sidebar__vertical.navbar-vertical.navbar-expand-md.navbar-light
+      .container-fluid
+        //- Toggle
+        button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#collapsibleNavId', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
 
-    //- Toggle
-    button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#collapsibleNavId', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
+        //- Logo
+        a.navbar-brand(href='#')
+          h1
+            img(src='./images/logo.svg', alt='logo-main')
+        
+        //- User
+        .left-sidebar__user.d-md-none
+          //- Dropdown
+          .dropdown
+            //-Toggle
+            a#sidebarIcon.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              .avatar.avatar-sm.avatar-online
+                img.avatar-img.rounded-circle(src='', alt='...')
+            //-Menu
+            .dropdown-menu.dropdown-menu-right(aria-labelledby='sidebarIcon')
+              a.dropdown-item(href='#') Profile
+              a.dropdown-item(href='#') Settings
+              hr.dropdown-divider
+              a.dropdown-item(href='#') Logout
 
-    //- Logo
-    a.navbar-brand(href='#')
-      h1
-        img(src='./images/logo.svg', alt='logo-main')
-    
-    //- User
-    .navbar-user.d-md-none.js-dropdown
-      .navbar-user__avatar.js-dropdown-toggle
-        img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
+        //- Collaspe
+        .collapse.navbar-collapse#navbarCollapse
+          
+          //- form
+          form.mt-4.mb-3.d-md-none
+            .input-group.input-group-rounded.input-group-merge
+              input.form-control.form-control-rounded.form-control-prepended(type='search', placeholder='Search', aria-label='Search')
+              .input-group-prepend
+                .input-group-text
+                  span(class= "fe.fe-search")
+          //-main-menu
+          +main-menu()
 
-    //- Collaspe
-    .collapse.navbar-collapse#navbarCollapse
-      +main-menu()
+          hr.left-sidebar__divider.my-3
 
+          +sub-menu()
 
-  
+          a.left-sidebar__btn.btn.btn-block.btn-primary.mb-4(href='#', data-toggle='modal')
+            i(class= "fe.fe-sliders mr-2")
+            |  Customize
+
+          .user-profile#sidebarUser.d-none.d-md-flex
+            //- Icon
+            a.user-profile__link(href='#sidebarModalActivity', data-toggle='modal')
+              span.user-profile__icon
+                i(class= "fe fe-bell")
+
+            //- Dropup
+            .dropup
+              //- Toggle
+              a(class="dropdown-toggle", id="sidebarIconCopy", href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                .user-profile__avatar.avatar-sm.avatar-online
+                  img.user-profile__img.rounded-circle(src='./images/avatar-1.jpg', alt='avatar user')
+
+              //- Menu
+              .dropdown-menu(aria-labelledby='sidebarIconCopy')
+                a.dropdown-item(href='#') Profile
+                a.dropdown-item(href='#') Settings
+                hr.dropdown-divider
+                a.dropdown-item(href='#') Logout
+
+            //- Icon
+            a.user-profile__link(href='#sidebarModalSearch', data-toggle='modal')
+              span.user-profile__icon
+                i(class= "fe fe-search")

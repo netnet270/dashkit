@@ -16,7 +16,8 @@
         },
         {
           title: 'Alternative',
-          badge: 'New'
+          badge: 'New',
+          active: true
         }
       ]
     },
@@ -202,29 +203,117 @@ mixin main-menu()
           
         if item.submenu
           .collapse(id= item.id)
-          ul.nav.nav-sm.flex-column.js-submenu
-            each sub in item.submenu
-              li.nav-item.js-sub-item(
-                class=sub.childmenu ? 'navbar-item--has-children' : '',
-                class= sub.active ? 'active' : ''
-              )
-                a.nav-link(
-                  href= item.href ? item.href : "#", 
-                  data-toggle= "collapse", 
-                  role ="button", 
-                  aria-expanded ="false", 
-                  aria-controls= item.id
-                )= sub.title
+            ul.nav.nav-sm.flex-column.js-submenu
+              each sub in item.submenu
+                li.nav-item.js-sub-item(
+                  class=sub.childmenu ? 'navbar-item--has-children' : '',
+                  class= sub.active ? 'active' : ''
+                )
+                  a.nav-link(
+                    href= item.href ? item.href : "#", 
+                    data-toggle= "collapse", 
+                    role ="button", 
+                    aria-expanded ="false", 
+                    aria-controls= item.id
+                  )= sub.title
+                    if sub.badge
+                      span.badge.badge--soft-success.ml-auto= sub.badge
 
-                if sub.childmenu
-                  .collapse(id= sub.id)
-                    ul.nav.nav-sm.flex-column.js-submenu
-                      each child in sub.childmenu
-                        li.nav-item.js-sub-item(
-                          class= child.active ? 'active' : ''
-                        )
-                          a.nav-link(
-                            href= item.href ? item.href : "#", 
-                          )= child.title
-                          
-                                                    
+                  if sub.childmenu
+                    .collapse(id= sub.id)
+                      ul.nav.nav-sm.flex-column.js-submenu
+                        each child in sub.childmenu
+                          li.nav-item(
+                            class= child.active ? 'active' : ''
+                          )
+                            a.nav-link(
+                              href= item.href ? item.href : "#", 
+                            )= child.title
+
+-
+  var subs = [
+    {
+      title: "Getting started", 
+      icon: "fe fe-clipboard",
+    },
+    { 
+      title: "Components",
+      icon: 'fe fe-book-open',
+      href: "#sidebarComponents",
+      toggle: "collaspe",
+      id: "sidebarComponents",
+      submenu: [
+        {
+          title: 'Alerts'
+        },
+        {
+          title: 'Avatars'
+        },
+        {
+          title: 'Badges'
+        },
+        {
+          title: 'Breadcrumb'
+        },
+        {
+          title: 'Buttons'
+        },
+        {
+          title: 'Button group'
+        },
+        {
+          title: 'Dropdowns'
+        },
+        {
+          title: 'Forms'
+        },
+        {
+          title: 'Lists'
+        },
+        {
+          title: 'Modal'
+        }
+      ]
+    }, 
+    {
+      title: " Changelog ",
+      icon: 'fe fe-git-branch',
+      badge: "v1.3.4"
+    }
+  ]
+  
+mixin sub-menu()
+  h3.navbar-heading Documentation
+  ul.navbar-nav.mb-md-4
+    each item in subs
+      li.navbar-item.js-navbar-item(
+        class=item.submenu ? 'navbar-item--has-children' : '', 
+        class=item.active ? 'active' : ''
+      )
+        a.navbar-link.js-navbar-link(
+          href= item.href ? item.href : "#", 
+          data-toggle= item.toggle ? "" : "collapse", 
+          role ="button", 
+          aria-expanded ="false", 
+          aria-controls= item.id
+        )
+          i(class= item.icon)
+          |#{item.title}
+          
+          if item.badge
+            span.badge.badge--primary.ml-auto= item.badge
+          
+        if item.submenu
+          .collapse(id= item.id)
+            ul.nav.nav-sm.flex-column.js-submenu
+              each sub in item.submenu
+                li.nav-item.js-sub-item(
+                  class=sub.childmenu ? 'navbar-item--has-children' : '',
+                  class= sub.active ? 'active' : ''
+                )
+                  a.nav-link(
+                    href= item.href ? item.href : "#"
+                  )= sub.title
+
+                           
+                                                      
