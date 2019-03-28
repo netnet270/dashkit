@@ -12,12 +12,44 @@ mixin content()
             .row.align-items-end
               .col
                 p.header__pretitle Overview
-                h2.header__title dashboards
+                h2.header__title Dashboard
 
               .col-auto
                 a.btn.btn-primary(href='#') Create Report
 
+      //- stats
+      -
+        var stats= [
+          {
+            title: 'BUDGET',
+            count: '$24,500',
+            badge: '+3.5%',
+            icon: 'fe fe-dollar-sign'
+          },
+           {
+            title: 'TOTAL HOURS',
+            count: '763.5',
+            icon: 'fe fe-briefcase'
+          },
+           {
+            title: 'Progress',
+            count: '84.5%',
+            progress: true,
+            icon: 'fe fe-clipboard'
+          },
+           {
+            title: 'Effective Hourly',
+            count: '$85.50',
+            icon: 'fe fe-clock'
+          }
+        ]
+
       .container-fluid
         .row
-          .col-lg-4.col-lg-6.col
+          each item in stats
+            +stats-card({title: item.title , count: item.count, badge: item.badge, progress: item.progress, icon: item.icon})
+          
+
+            
+
             

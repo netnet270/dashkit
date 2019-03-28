@@ -3,20 +3,16 @@
 //-------------------------------------------------------
 
 //Fonts
-$font-family-base:"Feather";
-$font-family-icons: 'Font Awesome 5 Free';
+$font-family-base: Cerebri Sans;
+$font-family-icons: Feather;
 
 //Font-size
 $font-size-base: 16px;
-$font-size-medium: 14px;
+$font-size-medium: 13px;
 $font-size-small: 12px;
 $font-size-xsmall: 10px;
-$font-size-large: 18px;
-$font-size-xlarge: 24px;
-
-//Font-weight
-$font-weight-small: 300;
-$font-weight-normal: 400;
+$font-size-large: 20px;
+$font-size-xlarge: 26px;
 
 //Line-height
 $line-height-base: 1.2;
@@ -30,6 +26,12 @@ $font-weight-bold: 600;
 
 //Color 
 $cl-white: #fff;
+$cl-dark: #212529;
+$cl-pretitle: #95aac9;
+$cl-green: #00d97e;
+$cl-blue: #2c7be5;
+$cl-link: #6e84a3;
+$cl-link-hover: #12263f;
 
 // Borders
 $border-radius-base: 8px;
@@ -39,12 +41,14 @@ $border-radius-hack: 100px;
 //Border Color
 $border-light-green: #c7d8b6;
 $border-light-pink: #fbc3cd;
-$border-light-blue: #b2d5ed;
 $border-gray: #afafaf;
-$border-light-gray: #e3e3e3;
+$border-light-gray: #e3ebf6;
+$border-light-blue: #2d7be5;
+$border-btn: #1862c6;
+$border-card: #edf2f9;
 
 //Background
-$bg-light-green: #ebf9ef;
+$bg-light-white: #f9fbfd;
 $bg-light-pink: #fef0f3;
 $bg-light-blue: #f5fbff;
 $bg-light-gray: #f5f5f5;

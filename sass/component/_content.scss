@@ -1,35 +1,50 @@
 //-------------------------------------------------------
 //- COMPONENT :: CONTENT
 //-------------------------------------------------------
+
 body {
   font-family: $font-family-base;
-  font-size: 1rem;
+  font-size: $font-size-base;
   font-weight: $font-weight-normal;
   line-height: $line-height-normal;
-  color: #212529;
+  color: $cl-dark;
   text-align: left;
-  // background-color: $cl-white;
-  background: #f9fbfd;
+  background: $bg-light-white;
 }
 
 .main-content {
   margin-left: 250px;
   width: calc(100% - 250px);
-  
+
+  .container-fluid {
+    padding-left: 36px;
+    padding-right: 36px
+  }
 }
 
 .header {
+  margin-bottom: 32px;
+  
+  &__body {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-light-gray;
+  }
+
   &__pretitle {
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #95aac9;
-    font-size: 10px;
-    font-weight: 500;
+    color: $cl-pretitle;
+    font-size: $font-size-xsmall;
+    font-weight: $font-weight-medium;
     margin-bottom: 9px;
+    line-height: 11px; 
   }
   
   &__title {
-    font-size: 1.625rem;
-    font-weight: 500;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-medium;
+    line-height: 28.6px; 
+    letter-spacing: -0.52px;
   }
 }

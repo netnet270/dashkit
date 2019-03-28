@@ -6,6 +6,18 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
   outline: none !important;
   box-shadow: none;
 }
+a:hover {
+  text-decoration: none;
+}
+
+[class*="col-"] {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.text-muted {
+  color: #95aac9!important;
+}
 
 @media (min-width: 768px){
   .navbar-vertical.navbar-expand-md>[class*=container] {

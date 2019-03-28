@@ -1,0 +1,16 @@
+include ../modules/head/_head
+include ../modules/content/_content
+include ../modules/menu/_menu
+
+include ../modules/_sidebar
+include ../modules/_modal
+include ../modules/_stats-card
+include ../modules/_plugins
+
+doctype html
+html(lang='en')
+  head
+    block head
+  body
+    block body
+  +plugins()

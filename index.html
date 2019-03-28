@@ -1,1 +1,305 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/all.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/><link rel="stylesheet" type="text/css" href="css/style.css"/><link href="images/favicon.ico" rel="icon" type="image/x-icon"/><title>Dashkit</title></head><body><div id="main-wapper"><div class="left-sidebar"><nav class="navbar left-sidebar__vertical navbar-vertical navbar-expand-md navbar-light"><div class="container-fluid"><button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#"><h1><img src="./images/logo.svg" alt="logo-main"/></h1></a><div class="left-sidebar__user d-md-none"><div class="dropdown"><a class="dropdown-toggle" id="sidebarIcon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="avatar avatar-sm avatar-online"><img class="avatar-img rounded-circle" src="" alt="..."/></div></a><div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a><hr class="dropdown-divider"/><a class="dropdown-item" href="#">Logout</a></div></div></div><div class="collapse navbar-collapse" id="navbarCollapse"><form class="mt-4 mb-3 d-md-none"><div class="input-group input-group-rounded input-group-merge"><input class="form-control form-control-rounded form-control-prepended" type="search" placeholder="Search" aria-label="Search"/><div class="input-group-prepend"><div class="input-group-text"><span class="fe.fe-search"></span></div></div></div></form><ul class="navbar-nav"><li class="navbar-item js-navbar-item navbar-item--has-children active"><a class="navbar-link js-navbar-link" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards"><i class="fe fe-home"></i>Dashboards</a><div class="collapse" id="sidebarDashboards"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">Default</a></li><li class="nav-item js-sub-item active"><a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">Alternative<span class="badge badge--soft-success ml-auto">New</span></a></li></ul></div></li><li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages"><i class="fe fe-file"></i>Pages</a><div class="collapse" id="sidebarPages"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Profile</a><div class="collapse" id="sidebarProfile"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarPages">Posts</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Groups</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Groups</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Groups</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Groups</a></li></ul></div></li><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Project</a><div class="collapse" id="sidebarProject"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarPages">Overview</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Files</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Reports</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">New project</a></li></ul></div></li><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Team</a><div class="collapse" id="sidebarTeam"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarPages">Overview</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Projects</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">Members</a></li><li class="nav-item"><a class="nav-link" href="#sidebarPages">New team</a></li></ul></div></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Orders</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Feed</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Settings</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Invoicers</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">Pricing</a></li></ul></div></li><li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth"><i class="fe fe-user"></i>Authentication</a><div class="collapse" id="sidebarAuth"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">Sign in</a><div class="collapse"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Cover</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Illustration</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Basic</a></li></ul></div></li><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">Sign up</a><div class="collapse" id="sidebarSignUp"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Cover</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Illustration</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Basic</a></li></ul></div></li><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">Password reset</a><div class="collapse" id="sidebarPassword"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Cover</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Illustration</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Basic</a></li></ul></div></li><li class="nav-item js-sub-item navbar-item--has-children"><a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">Error</a><div class="collapse" id="sidebarError"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Cover</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Illustration</a></li><li class="nav-item"><a class="nav-link" href="#sidebarAuth">Basic</a></li></ul></div></li></ul></div></li><li class="navbar-item js-navbar-item"><a class="navbar-link js-navbar-link" href="#sidebarModalActivity" data-toggle="modal" role="button" aria-expanded="false" aria-controls="sidebarModalActivity"><i class="fe fe-bell"></i>Notifications</a></li></ul><hr class="left-sidebar__divider my-3"/><h3 class="navbar-heading">Documentation</h3><ul class="navbar-nav mb-md-4"><li class="navbar-item js-navbar-item"><a class="navbar-link js-navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false"><i class="fe fe-clipboard"></i>Getting started</a></li><li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents"><i class="fe fe-book-open"></i>Components</a><div class="collapse" id="sidebarComponents"><ul class="nav nav-sm flex-column js-submenu"><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Alerts</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Avatars</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Badges</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Breadcrumb</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Buttons</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Button group</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Dropdowns</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Forms</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Lists</a></li><li class="nav-item js-sub-item"><a class="nav-link" href="#sidebarComponents">Modal</a></li></ul></div></li><li class="navbar-item js-navbar-item"><a class="navbar-link js-navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false"><i class="fe fe-git-branch"></i> Changelog <span class="badge badge--primary ml-auto">v1.3.4</span></a></li></ul><a class="left-sidebar__btn btn btn-block btn-primary mb-4" href="#" data-toggle="modal"><i class="fe.fe-sliders mr-2"></i> Customize</a><div class="user-profile d-none d-md-flex" id="sidebarUser"><a class="user-profile__link" href="#sidebarModalActivity" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-bell"></i></span></a><div class="dropup"><a class="dropdown-toggle" id="sidebarIconCopy" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="user-profile__avatar avatar-sm avatar-online"><img class="user-profile__img rounded-circle" src="./images/avatar-1.jpg" alt="avatar user"/></div></a><div class="dropdown-menu" aria-labelledby="sidebarIconCopy"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a><hr class="dropdown-divider"/><a class="dropdown-item" href="#">Logout</a></div></div><a class="user-profile__link" href="#sidebarModalSearch" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-search"></i></span></a></div></div></div></nav></div><div class="js-main-content main-content"><header class="header"><div class="container-fluid"><div class="header__body"><div class="row align-items-end"><div class="col"><p class="header__pretitle">Overview</p><h2 class="header__title">dashboards</h2></div><div class="col-auto"><a class="btn btn-primary" href="#">Create Report</a></div></div></div></div></header><div class="container-fluid"><div class="row"><div class="col-lg-4 col-lg-6 col"></div></div></div></div></div></body><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src="js/main.js" type="text/javascript"> </script></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <title>Dashkit</title>
+  </head>
+  <body>
+    <div id="main-wapper">
+      <div class="modal fade fixed-right" id="modalDemo" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-dialog-vertical" role="document">
+          <form class="modal-content" id="demoForm">
+            <div class="modal-body">
+              <!-- Close--><a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a>
+              <div class="modal-img text-center"><img class="img-fluid mb-3" src="./images/designer-life.svg" alt="design"/>
+                <h3 class="text-center mb-2">Make Dashkit Your Own</h3>
+                <p class="text-center mb-4">Set preferences that will be cookied for your live preview demonstration.</p>
+              </div>
+              <hr class="modal-line mb-4"/>
+              <div class="modal-color">
+                <h4 class="modal-color__title mb-1">Color Scheme</h4>
+                <p class="modal-color__text text-muted mb-3">Overall light or dark presentation.</p>
+                <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+                  <label class="btn btn-white active col">
+                    <input type="radio" name="colorScheme" value="light" id="colorSchemeLight" checked="checked"/><i class="mr-2 fe fe-sun">Light Mode</i>
+                  </label>
+                  <label class="btn btn-white col ml-2">
+                    <input type="radio" name="colorScheme" value="dark" id="colorSchemeDark"/><i class="mr-2 fe fe-moon">Dark Mode</i>
+                  </label>
+                </div>
+              </div>
+              <div class="modal-nav-position">
+                <h4 class="modal-nav-position__title mb-1">Navigation Position</h4>
+                <p class="modal-nav-position__text text-muted mb-3">Select the primary navigation paradigm for your app.</p>
+                <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+                  <label class="btn btn-white active col">
+                    <input type="radio" name="navPosition" value="light" id="navPositionSidenav" checked="checked"/>Sidenav
+                  </label>
+                  <label class="btn btn-white col ml-2">
+                    <input type="radio" name="navPosition" value="dark" id="navPositionTopnav"/>Topnav
+                  </label>
+                  <label class="btn btn-white col ml-2">
+                    <input type="radio" name="navPosition" value="dark" id="navPositionCombo"/>Combo
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button class="btn btn-block btn-primary mt-auto" type="submit">Preview</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="left-sidebar">
+        <nav class="navbar left-sidebar__vertical navbar-vertical navbar-expand-md navbar-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">
+              <h1><img src="./images/logo.svg" alt="logo-main"/></h1></a>
+            <div class="left-sidebar__user d-md-none">
+              <div class="dropdown"><a class="dropdown-toggle" id="sidebarIcon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="avatar avatar-sm avatar-online"><img class="avatar-img rounded-circle" src="./images/avatar-1.jpg" alt="img avatar"/></div></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a>
+                  <hr class="dropdown-divider"/><a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <form class="mt-4 mb-3 d-md-none">
+                <div class="input-group input-group-rounded input-group-merge">
+                  <input class="form-control form-control-rounded form-control-prepended" type="search" placeholder="Search" aria-label="Search"/>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><span class="fe.fe-search"></span></div>
+                  </div>
+                </div>
+              </form>
+              <ul class="navbar-nav js-navbar-nav">
+                <li class="navbar-item js-navbar-item navbar-item--has-children navbar-item--active"><a class="navbar-link js-navbar-link navbar-link--has-children navbar-link--active" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards"><i class="fe fe-home"></i>Dashboards</a>
+                  <div class="collapse" id="sidebarDashboards">
+                    <ul class="nav sub-menu flex-column js-submenu">
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Default</a>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--active"><a class="navbar-link navbar-link--active" href="#" data-toggle="collapse" role="button" aria-expanded="false">Alternative<span class="badge badge--soft-success ml-auto">New</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link navbar-link--has-children" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages"><i class="fe fe-file"></i>Pages</a>
+                  <div class="collapse" id="sidebarPages">
+                    <ul class="nav sub-menu flex-column js-submenu">
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarProfile" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">Profile</a>
+                        <div class="collapse" id="sidebarProfile">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Posts</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Groups</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Groups</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Groups</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Groups</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarProject" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">Project</a>
+                        <div class="collapse" id="sidebarProject">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Overview</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Files</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Reports</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">New project</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarTeam" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarTeam">Team</a>
+                        <div class="collapse" id="sidebarTeam">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Overview</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Projects</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">Members</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarPages">New team</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Orders</a>
+                      </li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Feed</a>
+                      </li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Settings</a>
+                      </li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Invoicers</a>
+                      </li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#" data-toggle="collapse" role="button" aria-expanded="false">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link navbar-link--has-children" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth"><i class="fe fe-user"></i>Authentication</a>
+                  <div class="collapse" id="sidebarAuth">
+                    <ul class="nav sub-menu flex-column js-submenu">
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarSignIn" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn">Sign in</a>
+                        <div class="collapse" id="sidebarSignIn">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Cover</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Illustration</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Basic</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarSignUp" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignUp">Sign up</a>
+                        <div class="collapse" id="sidebarSignUp">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Cover</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Illustration</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Basic</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarPassword" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPassword">Password reset</a>
+                        <div class="collapse" id="sidebarPassword">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Cover</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Illustration</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Basic</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="navbar-item js-sub-item navbar-item--has-children"><a class="navbar-link navbar-link--has-children" href="#sidebarError" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarError">Error</a>
+                        <div class="collapse" id="sidebarError">
+                          <ul class="nav child-menu js-childmenu flex-column">
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Cover</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Illustration</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#sidebarAuth">Basic</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <hr class="left-sidebar__divider my-3"/>
+              <h3 class="navbar-heading">Documentation</h3>
+              <ul class="navbar-nav mb-md-4">
+                <li class="navbar-item js-navbar-item"><a class="navbar-link js-navbar-link" href="#" data-toggle="" role="button" aria-expanded="false"><i class="fe fe-clipboard"></i>Getting started</a>
+                </li>
+                <li class="navbar-item js-navbar-item navbar-item--has-children"><a class="navbar-link js-navbar-link navbar-link--has-children" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents"><i class="fe fe-book-open"></i>Components</a>
+                  <div class="collapse" id="sidebarComponents">
+                    <ul class="nav sub-menu flex-column js-submenu">
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Alerts</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Avatars</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Badges</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Breadcrumb</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Buttons</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Button group</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Dropdowns</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Forms</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Lists</a></li>
+                      <li class="navbar-item js-sub-item"><a class="navbar-link" href="#sidebarComponents" data-toggle="" role="button" aria-expanded="false" aria-controls="sidebarComponents">Modal</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navbar-item js-navbar-item"><a class="navbar-link js-navbar-link" href="#" data-toggle="" role="button" aria-expanded="false"><i class="fe fe-git-branch"></i> Changelog <span class="badge badge--primary ml-auto">v1.3.4</span></a>
+                </li>
+              </ul>
+              <div class="mt-auto"></div><a class="left-sidebar__btn btn btn-block btn-primary mb-4" href="#modalDemo" data-toggle="modal"><i class="fe fe-sliders mr-2"></i> Customize</a>
+              <div class="user-profile d-none d-md-flex" id="sidebarUser"><a class="user-profile__link" href="#sidebarModalActivity" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-bell"></i></span></a>
+                <div class="dropup"><a class="dropdown-toggle" id="sidebarIconCopy" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="user-profile__avatar avatar-sm avatar-online"><img class="user-profile__img rounded-circle" src="./images/avatar-1.jpg" alt="avatar user"/></div></a>
+                  <div class="dropdown-menu" aria-labelledby="sidebarIconCopy"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a>
+                    <hr class="dropdown-divider"/><a class="dropdown-item" href="#">Logout</a>
+                  </div>
+                </div><a class="user-profile__link" href="#sidebarModalSearch" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-search"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="js-main-content main-content">
+        <header class="header">
+          <div class="container-fluid">
+            <div class="header__body">
+              <div class="row align-items-end">
+                <div class="col">
+                  <p class="header__pretitle">Overview</p>
+                  <h2 class="header__title">Dashboard</h2>
+                </div>
+                <div class="col-auto"><a class="btn btn-primary" href="#">Create Report</a></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col">
+              <div class="card card-stats">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title text-uppercase text-muted mb-2">BUDGET</h4>
+                      <div class="row align-items-center no-gutters"><span class="card-count">$24,500</span><span class="badge badge--soft-success">+3.5%</span>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="card-icon text-muted mb-0 fe fe-dollar-sign"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col">
+              <div class="card card-stats">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title text-uppercase text-muted mb-2">TOTAL HOURS</h4>
+                      <div class="row align-items-center no-gutters"><span class="card-count">763.5</span>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="card-icon text-muted mb-0 fe fe-briefcase"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col">
+              <div class="card card-stats">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title text-uppercase text-muted mb-2">Progress</h4>
+                      <div class="row align-items-center no-gutters"><span class="card-count">84.5%</span>
+                        <div class="progress progress-sm">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="card-icon text-muted mb-0 fe fe-clipboard"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col">
+              <div class="card card-stats">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title text-uppercase text-muted mb-2">Effective Hourly</h4>
+                      <div class="row align-items-center no-gutters"><span class="card-count">$85.50</span>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="card-icon text-muted mb-0 fe fe-clock"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/main.js" type="text/javascript"> </script>
+</html>

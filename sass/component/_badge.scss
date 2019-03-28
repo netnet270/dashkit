@@ -1,0 +1,18 @@
+//-------------------------------------------------------
+//- COMPONENT :: BADGE
+//-------------------------------------------------------
+
+.badge {     
+  padding: .33em .5em;
+  border-radius: .375rem;
+
+  &--soft-success {
+    color: $cl-green;
+    background-color: #ccf7e5;
+  }
+
+  &--primary {
+   color: $cl-white;
+   background-color: $cl-blue;
+  }
+}

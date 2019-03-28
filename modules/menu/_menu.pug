@@ -113,6 +113,7 @@
         {
           title: 'Sign in',
           href: "#sidebarSignIn",
+          id: "sidebarSignIn",
           childmenu: [
             {
               title: 'Cover'
@@ -174,26 +175,21 @@
           ]
         }
       ]
-    },
-    {
-      title: "Notifications",
-      icon: 'fe fe-bell',
-      href: "#sidebarModalActivity",
-      id: "sidebarModalActivity",
-      toggle:"modal"
     }
   ]
 
 mixin main-menu()
-  ul.navbar-nav
+  ul.navbar-nav.js-navbar-nav
     each item in menus
       li.navbar-item.js-navbar-item(
         class=item.submenu ? 'navbar-item--has-children' : '', 
-        class=item.active ? 'active' : ''
+        class=item.active ? 'navbar-item--active' : ''
       )
         a.navbar-link.js-navbar-link(
+          class=item.submenu ? 'navbar-link--has-children' : '',
+          class=item.active ? 'navbar-link--active' : ''
           href= item.href ? item.href : "#", 
-          data-toggle= item.toggle ? "modal" : "collapse", 
+          data-toggle= item.toggle ? "" : "collapse", 
           role ="button", 
           aria-expanded ="false", 
           aria-controls= item.id
@@ -203,30 +199,32 @@ mixin main-menu()
           
         if item.submenu
           .collapse(id= item.id)
-            ul.nav.nav-sm.flex-column.js-submenu
+            ul.nav.sub-menu.flex-column.js-submenu
               each sub in item.submenu
-                li.nav-item.js-sub-item(
+                li.navbar-item.js-sub-item(
                   class=sub.childmenu ? 'navbar-item--has-children' : '',
-                  class= sub.active ? 'active' : ''
+                  class= sub.active ? 'navbar-item--active' : ''
                 )
-                  a.nav-link(
-                    href= item.href ? item.href : "#", 
-                    data-toggle= "collapse", 
+                  a.navbar-link(
+                    href= sub.href ? sub.href : "#", 
+                    class=sub.childmenu ? 'navbar-link--has-children' : '',
+                    class= sub.active ? 'navbar-link--active' : ''
+                    data-toggle= sub.toggle ? "modal" : "collapse",
                     role ="button", 
                     aria-expanded ="false", 
-                    aria-controls= item.id
+                    aria-controls= sub.id
                   )= sub.title
                     if sub.badge
                       span.badge.badge--soft-success.ml-auto= sub.badge
 
                   if sub.childmenu
                     .collapse(id= sub.id)
-                      ul.nav.nav-sm.flex-column.js-submenu
+                      ul.nav.child-menu.js-childmenu.flex-column
                         each child in sub.childmenu
-                          li.nav-item(
+                          li.navbar-item(
                             class= child.active ? 'active' : ''
                           )
-                            a.nav-link(
+                            a.navbar-link(
                               href= item.href ? item.href : "#", 
                             )= child.title
 
@@ -288,32 +286,41 @@ mixin sub-menu()
     each item in subs
       li.navbar-item.js-navbar-item(
         class=item.submenu ? 'navbar-item--has-children' : '', 
-        class=item.active ? 'active' : ''
+        class=item.active ? 'navbar-item--active' : ''
       )
         a.navbar-link.js-navbar-link(
+          class=item.submenu ? 'navbar-link--has-children' : '',
+          class=item.active ? 'navbar-link--active' : ''
           href= item.href ? item.href : "#", 
-          data-toggle= item.toggle ? "" : "collapse", 
+          data-toggle= item.toggle ? "collapse" : "", 
           role ="button", 
           aria-expanded ="false", 
           aria-controls= item.id
         )
           i(class= item.icon)
           |#{item.title}
-          
+
           if item.badge
             span.badge.badge--primary.ml-auto= item.badge
           
         if item.submenu
           .collapse(id= item.id)
-            ul.nav.nav-sm.flex-column.js-submenu
+            ul.nav.sub-menu.flex-column.js-submenu
               each sub in item.submenu
-                li.nav-item.js-sub-item(
-                  class=sub.childmenu ? 'navbar-item--has-children' : '',
-                  class= sub.active ? 'active' : ''
+                li.navbar-item.js-sub-item(
+                  class= sub.childmenu ? 'navbar-item--has-children' : '',
+                  class= sub.active ? 'navbar-item--active' : ''
                 )
-                  a.nav-link(
-                    href= item.href ? item.href : "#"
+                  a.navbar-link(
+                    href= item.href ? item.href : "#", 
+                    class=sub.childmenu ? 'navbar-link--has-children' : '',
+                    class= sub.active ? 'navbar-link--active' : ''
+                    data-toggle= "", 
+                    role ="button", 
+                    aria-expanded ="false", 
+                    aria-controls= item.id
                   )= sub.title
-
+          
+        
                            
                                                       

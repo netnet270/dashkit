@@ -1,10 +1,8 @@
 $(window).on('load', function(){
 
   sidebarCollapse();
-
-  // datepicker
-  $('#datepicker').datepicker();
-
+  menu();
+  
   //chart
   $('.js-chart').each(function(){
     dataLabel = $(this).attr("labels");
@@ -94,5 +92,14 @@ $(window).on('load', function(){
     })
   }
   
+  function menu(){
+    $('.js-navbar-link').on('click', function(){
+      if($(this).hasClass('navbar-link--active')){
 
+      }
+      else{
+        $('.js-submenu').slideUp();
+      }
+    })
+  }
   
