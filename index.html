@@ -13,40 +13,51 @@
   </head>
   <body>
     <div id="main-wapper">
-      <div class="modal fade fixed-right" id="modalDemo" tabindex="-1" role="dialog" aria-modal="true">
-        <div class="modal-dialog modal-dialog-vertical" role="document">
+      <div class="modal fade" id="modalDemo" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-dialog-vertical fixed-right" role="document">
           <form class="modal-content" id="demoForm">
-            <div class="modal-body">
-              <!-- Close--><a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a>
-              <div class="modal-img text-center"><img class="img-fluid mb-3" src="./images/designer-life.svg" alt="design"/>
-                <h3 class="text-center mb-2">Make Dashkit Your Own</h3>
-                <p class="text-center mb-4">Set preferences that will be cookied for your live preview demonstration.</p>
+            <div class="modal-body"><a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+              <div class="modal-top text-center"><img class="img-fluid mb-3" src="./images/designer-life.svg" alt="design">
+                <h4 class="modal-top__title text-center mb-2">Make Dashkit Your Own</h4>
+                <p class="modal-top__intro text-center mb-4">Set preferences that will be cookied for your live preview demonstration.</p>
               </div>
-              <hr class="modal-line mb-4"/>
-              <div class="modal-color">
-                <h4 class="modal-color__title mb-1">Color Scheme</h4>
-                <p class="modal-color__text text-muted mb-3">Overall light or dark presentation.</p>
+              <hr class="modal-line mb-4">
+              <div class="modal-color-scheme">
+                <h5 class="modal-color-scheme__title mb-1">Color Scheme</h5>
+                <p class="modal-color-scheme__text text-muted mb-3">Overall light or dark presentation.</p>
                 <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
                   <label class="btn btn-white active col">
-                    <input type="radio" name="colorScheme" value="light" id="colorSchemeLight" checked="checked"/><i class="mr-2 fe fe-sun">Light Mode</i>
+                    <input type="radio" name="colorScheme" value="light" id="colorSchemeLight" checked="checked"><i class="mr-2 fe fe-sun"></i>Light Mode
                   </label>
                   <label class="btn btn-white col ml-2">
-                    <input type="radio" name="colorScheme" value="dark" id="colorSchemeDark"/><i class="mr-2 fe fe-moon">Dark Mode</i>
+                    <input type="radio" name="colorScheme" value="dark" id="colorSchemeDark"><i class="mr-2 fe fe-moon"></i>Dark Mode
                   </label>
                 </div>
               </div>
               <div class="modal-nav-position">
-                <h4 class="modal-nav-position__title mb-1">Navigation Position</h4>
+                <h5 class="modal-nav-position__title mb-1">Navigation Position</h5>
                 <p class="modal-nav-position__text text-muted mb-3">Select the primary navigation paradigm for your app.</p>
                 <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
                   <label class="btn btn-white active col">
-                    <input type="radio" name="navPosition" value="light" id="navPositionSidenav" checked="checked"/>Sidenav
+                    <input type="radio" name="navPosition" value="light" id="navPositionSidenav" checked="checked">Sidenav
                   </label>
                   <label class="btn btn-white col ml-2">
-                    <input type="radio" name="navPosition" value="dark" id="navPositionTopnav"/>Topnav
+                    <input type="radio" name="navPosition" value="dark" id="navPositionTopnav">Topnav
                   </label>
                   <label class="btn btn-white col ml-2">
-                    <input type="radio" name="navPosition" value="dark" id="navPositionCombo"/>Combo
+                    <input type="radio" name="navPosition" value="dark" id="navPositionCombo">Combo
+                  </label>
+                </div>
+              </div>
+              <div class="modal-sidebar-color">
+                <h5 class="modal-sidebar-color__title mb-1">Sidebar Color</h5>
+                <p class="modal-sidebar-color__text text-muted mb-3">Usually dictated by the color scheme, but can be overriden.</p>
+                <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+                  <label class="btn btn-white active col">
+                    <input type="radio" name="navPosition" value="light" id="navPositionSidenav" checked="checked">Defadult
+                  </label>
+                  <label class="btn btn-white col ml-2">
+                    <input type="radio" name="navPosition" value="dark" id="navPositionTopnav">Vibrant
                   </label>
                 </div>
               </div>
@@ -55,6 +66,112 @@
               <button class="btn btn-block btn-primary mt-auto" type="submit">Preview</button>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="modal fade" id="modalAcivity" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-dialog-vertical fixed-left" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Notifications</h4>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group my-n3">
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-1.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Dianna Smiley</strong> shared your post with <strong class="text-body">Ab Hadley, </strong><strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others.</strong></div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-2.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍</div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-3.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Adolfo Hess</strong>commented 
+                            <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”</blockquote>
+                          </div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-4.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Daniela Dewitt</strong> subscribed to you.</div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-5.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Miyah Myles</strong> shared your post with <strong class="text-body">Ab Hadley, </strong><strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others.</strong></div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-6.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍</div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-7.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Adolfo Hess</strong>commented 
+                            <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”</blockquote>
+                          </div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-8.jpg" alt="image acivity">
+                    <div class="media-body text-muted">
+                      <div class="row">
+                        <div class="col">
+                          <div class="small text-muted"><strong class="text-body">Daniela Dewitt</strong> subscribed to you.</div>
+                        </div>
+                        <div class="col-auto ml-auto">
+                          <div class="small text-muted">2m</div>
+                        </div>
+                      </div>
+                    </div></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="left-sidebar">
@@ -205,7 +322,7 @@
                 </li>
               </ul>
               <div class="mt-auto"></div><a class="left-sidebar__btn btn btn-block btn-primary mb-4" href="#modalDemo" data-toggle="modal"><i class="fe fe-sliders mr-2"></i> Customize</a>
-              <div class="user-profile d-none d-md-flex" id="sidebarUser"><a class="user-profile__link" href="#sidebarModalActivity" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-bell"></i></span></a>
+              <div class="user-profile d-none d-md-flex" id="sidebarUser"><a class="user-profile__link" href="#modalAcivity" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-bell"></i></span></a>
                 <div class="dropup"><a class="dropdown-toggle" id="sidebarIconCopy" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="user-profile__avatar avatar-sm avatar-online"><img class="user-profile__img rounded-circle" src="./images/avatar-1.jpg" alt="avatar user"/></div></a>
                   <div class="dropdown-menu" aria-labelledby="sidebarIconCopy"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a>

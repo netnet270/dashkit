@@ -1,7 +1,7 @@
 $(window).on('load', function(){
-
-  menu();
   
+  menu();
+
 })
 
   // sidebar-collapse

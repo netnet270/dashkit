@@ -1,0 +1,185 @@
+//-------------------------------------------------------
+//- INCLUDE :: MODAL
+//-------------------------------------------------------
+
+//- modal Demo
+
+#modalDemo.modal.fade(tabindex='-1', role='dialog', aria-modal='true')
+  .modal-dialog.modal-dialog-vertical.fixed-right(role='document')
+    form#demoForm.modal-content
+      .modal-body
+
+        //- Close
+        a.close(data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+
+        .modal-top.text-center
+          img.img-fluid.mb-3(src='./images/designer-life.svg', alt='design')
+          h4.modal-top__title.text-center.mb-2 Make Dashkit Your Own
+          p.modal-top__intro.text-center.mb-4 Set preferences that will be cookied for your live preview demonstration.
+
+        hr.modal-line.mb-4
+
+        .modal-color-scheme
+          h5.modal-color-scheme__title.mb-1 Color Scheme
+          p.modal-color-scheme__text.text-muted.mb-3 Overall light or dark presentation.
+
+          .btn-group-toggle.d-flex.mb-4(data-toggle='buttons')
+            label.btn.btn-white.active.col
+              input(type='radio', name='colorScheme', value='light', id= 'colorSchemeLight', checked='checked')
+              i.mr-2(class ="fe fe-sun")
+              | Light Mode
+            label.btn.btn-white.col.ml-2
+              input(type='radio', name='colorScheme', value='dark', id= 'colorSchemeDark')
+              i.mr-2(class = "fe fe-moon")
+              | Dark Mode
+
+        .modal-nav-position
+          h5.modal-nav-position__title.mb-1 Navigation Position
+          p.modal-nav-position__text.text-muted.mb-3 Select the primary navigation paradigm for your app.
+
+          .btn-group-toggle.d-flex.mb-4(data-toggle='buttons')
+            label.btn.btn-white.active.col
+              input(type='radio', name='navPosition', value='light', id= 'navPositionSidenav', checked='checked')
+              | Sidenav
+
+            label.btn.btn-white.col.ml-2
+              input(type='radio', name='navPosition', value='dark', id= 'navPositionTopnav')
+              | Topnav
+
+            label.btn.btn-white.col.ml-2
+              input(type='radio', name='navPosition', value='dark', id= 'navPositionCombo')
+              | Combo
+
+        .modal-sidebar-color
+          h5.modal-sidebar-color__title.mb-1 Sidebar Color
+          p.modal-sidebar-color__text.text-muted.mb-3 Usually dictated by the color scheme, but can be overriden.
+
+          .btn-group-toggle.d-flex.mb-4(data-toggle='buttons')
+            label.btn.btn-white.active.col
+              input(type='radio', name='navPosition', value='light', id= 'navPositionSidenav', checked='checked')
+              | Defadult
+
+            label.btn.btn-white.col.ml-2
+              input(type='radio', name='navPosition', value='dark', id= 'navPositionTopnav')
+              | Vibrant
+
+      .modal-footer.border-0
+        button.btn.btn-block.btn-primary.mt-auto(type='submit') Preview
+
+//- Modal: Activity
+
+#modalAcivity.modal.fade(tabindex = "-1", role = "dialog", aria-modal= "true")
+  .modal-dialog.modal-dialog-vertical.fixed-left(role = "document")
+    .modal-content
+      .modal-header
+        h4.modal-title Notifications
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+
+      .modal-body
+        ul.list-group.my-n3
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-1.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Dianna Smiley
+                      |  shared your post with 
+                      strong.text-body Ab Hadley, 
+                      strong.text-body Adolfo Hess
+                      | , and 
+                      strong.text-body 3 others.
+                  
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-2.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Ab Hadley
+                      |  reacted to your post with a 😍
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-3.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Adolfo Hess
+                      | commented 
+                      blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                  
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-4.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Daniela Dewitt
+                      |  subscribed to you.
+                     
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-5.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Miyah Myles
+                      |  shared your post with 
+                      strong.text-body Ab Hadley, 
+                      strong.text-body Adolfo Hess
+                      | , and 
+                      strong.text-body 3 others.
+                  
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-6.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Ab Hadley
+                      |  reacted to your post with a 😍
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-7.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Adolfo Hess
+                      | commented 
+                      blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                  
+                  .col-auto.ml-auto
+                    .small.text-muted 2m
+          li.group-item
+            a.media(href="#")
+              img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-8.jpg", alt="image acivity")
+              .media-body.text-muted
+                .row
+                  .col
+                    .small.text-muted
+                      strong.text-body Daniela Dewitt
+                      |  subscribed to you.
+                     
+                  .col-auto.ml-auto
+                    .small.text-muted 2m

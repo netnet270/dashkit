@@ -10,6 +10,10 @@ a:hover {
   text-decoration: none;
 }
 
+a, .btn {
+  cursor: pointer;
+}
+
 [class*="col-"] {
   padding-right: 12px;
   padding-left: 12px;
