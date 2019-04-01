@@ -183,3 +183,80 @@
                      
                   .col-auto.ml-auto
                     .small.text-muted 2m
+
+//- Modal: Search
+#modalSearch.modal.fade(tabindex = "-1", role = "dialog", aria-modal= "true")
+  .modal-dialog.modal-dialog-vertical.fixed-left(role = "document")
+    .modal-content
+      .modal-body
+        form.mb-4(action="#")
+          .input-group
+            input(type="text" class= "form-control" placeholder= "Search")
+            .input-group-text
+              span(class="fe fe-search")
+        .my-n2
+          ul.list-group
+            li.group-item
+              a.media(href="#")
+                img.media__img(class ="mr-3 rounded" src="./images/team-logo-3.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Airbnb
+                  p(class="small text-muted mb-0")
+                    span(class="fe fe-clock mr-1")
+                    | Updated 2hr ago
+            li.group-item
+              a.media(href="#")
+                img.media__img(class ="mr-3 rounded" src="./images/team-logo-2.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Medium Corporation
+                  p(class="small text-muted mb-0")
+                    span(class="fe fe-clock mr-1")
+                    | Updated 2hr ago
+            li.group-item
+              a.media(href="#")
+                img.media__img.w-project(class ="mr-3 rounded" src="./images/project-1.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Homepage Redesign
+                  p(class="small text-muted mb-0")
+                    span(class="fe fe-clock mr-1")
+                    | Updated 4hr ago
+            li.group-item
+              a.media(href="#")
+                img.media__img.w-project(class ="mr-3 rounded" src="./images/project-2.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Travels & Time
+                  p(class="small text-muted mb-0")
+                    span(class="fe fe-clock mr-1")
+                    | Updated 2hr ago
+            li.group-item
+              a.media(href="#")
+                img.media__img.w-project(class ="mr-3 rounded" src="./images/project-3.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Safari Exploration
+                  p(class="small text-muted mb-0")
+                    span(class="fe fe-clock mr-1")
+                    | Updated 4hr ago
+            li.group-item
+              a.media(href="#")
+                img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-1.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Dianna Smiley
+                  p(class="small text-body mb-0")
+                    span(class="text-success icon-dot mr-1") 
+                      i(class="fas fa-circle")
+                    | Online
+            li.group-item
+              a.media(href="#")
+                img.media__img(class ="mr-3 rounded-circle" src="./images/avatar-2.jpg", alt="image search")
+                .media-body.text-muted
+                  h5.media__title.text-body.mb-1 Ab Hadley
+                  p(class="small text-body mb-0")
+                    span(class="text-danger icon-dot mr-1")
+                      i(class="fas fa-circle")
+                    | Offline
+                      
+                    
+                    
+
+
+

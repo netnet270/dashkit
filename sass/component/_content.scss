@@ -48,3 +48,14 @@ body {
     letter-spacing: -0.52px;
   }
 }
+
+// Performance 
+
+.table-responsive {
+  overflow-y: hidden;
+}
+
+.avatar-xs {
+  width: 26px;
+  height: 26px;
+}

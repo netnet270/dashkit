@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="sass/extensions/fontawesome/css/all.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
@@ -174,6 +174,59 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-dialog-vertical fixed-left" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="mb-4" action="#">
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Search">
+                  <div class="input-group-text"><span class="fe fe-search"></span></div>
+                </div>
+              </form>
+              <div class="my-n2">
+                <ul class="list-group">
+                  <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded" src="./images/team-logo-3.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Airbnb</h5>
+                        <p class="small text-muted mb-0"><span class="fe fe-clock mr-1"></span>Updated 2hr ago</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded" src="./images/team-logo-2.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Medium Corporation</h5>
+                        <p class="small text-muted mb-0"><span class="fe fe-clock mr-1"></span>Updated 2hr ago</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img w-project mr-3 rounded" src="./images/project-1.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Homepage Redesign</h5>
+                        <p class="small text-muted mb-0"><span class="fe fe-clock mr-1"></span>Updated 4hr ago</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img w-project mr-3 rounded" src="./images/project-2.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Travels & Time</h5>
+                        <p class="small text-muted mb-0"><span class="fe fe-clock mr-1"></span>Updated 2hr ago</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img w-project mr-3 rounded" src="./images/project-3.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Safari Exploration</h5>
+                        <p class="small text-muted mb-0"><span class="fe fe-clock mr-1"></span>Updated 4hr ago</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-1.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Dianna Smiley</h5>
+                        <p class="small text-body mb-0"><span class="text-success icon-dot mr-1"> <i class="fas fa-circle"></i></span>Online</p>
+                      </div></a></li>
+                  <li class="group-item"><a class="media" href="#"><img class="media__img mr-3 rounded-circle" src="./images/avatar-2.jpg" alt="image search">
+                      <div class="media-body text-muted">
+                        <h5 class="media__title text-body mb-1">Ab Hadley</h5>
+                        <p class="small text-body mb-0"><span class="text-danger icon-dot mr-1"><i class="fas fa-circle"></i></span>Offline</p>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="left-sidebar">
         <nav class="navbar left-sidebar__vertical navbar-vertical navbar-expand-md navbar-light">
           <div class="container-fluid">
@@ -328,7 +381,7 @@
                   <div class="dropdown-menu" aria-labelledby="sidebarIconCopy"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a>
                     <hr class="dropdown-divider"/><a class="dropdown-item" href="#">Logout</a>
                   </div>
-                </div><a class="user-profile__link" href="#sidebarModalSearch" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-search"></i></span></a>
+                </div><a class="user-profile__link" href="#modalSearch" data-toggle="modal"><span class="user-profile__icon"><i class="fe fe-search"></i></span></a>
               </div>
             </div>
           </div>
@@ -406,6 +459,238 @@
                     </div>
                     <div class="col-auto"><span class="card-icon text-muted mb-0 fe fe-clock"></span></div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title">Order</h4>
+                    </div>
+                    <div class="col-auto mr-n3"><span class="text-muted">Show affiliate:</span></div>
+                    <div class="col-auto"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-order">
+                    <canvas id="orderChart" width="585" height="300"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title">Devices</h4>
+                    </div>
+                    <div class="col-auto">
+                      <ul class="nav nav-tabs" id="devicesTab" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a></li>
+                        <li class="nav-item"><a class="nav-link" id="direct-tab" data-toggle="tab" href="#direct" role="tab" aria-controls="direct" aria-selected="false">Direct</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="devicesContent">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                      <div class="chart chart-appended">
+                        <canvas class="js-devices-chart" width="255" height="241" datasets="{&quot;datasets&quot;:[60,25,15]}"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="direct" role="tabpanel" aria-labelledby="direct-tab">
+                      <div class="chart chart-appended">
+                        <canvas class="js-devices-chart" width="255" height="241" datasets="{&quot;datasets&quot;:[15,45,20]}"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-legend"><span class="chart-legend__item"><i class="chart-legend-indicator"></i>Desktop</span><span class="chart-legend__item"><i class="chart-legend-indicator"></i>Tablet</span><span class="chart-legend__item"><i class="chart-legend-indicator"></i>Mobile</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title">Projects</h4>
+                    </div>
+                    <div class="col-auto"><a href="#">View all</a></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-auto"><a class="card-avatar" href="#"><img class="img-fluid" src="./images/project-1.jpg" alt="img projcet"/></a></div>
+                    <div class="col ml-n2"><a href="">
+                        <h5 class="card-title mb-1">Homepage Redesign</h5></a>
+                      <p class="card-text small text-muted">Updated 5hr ago</p>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdown"><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true"><span class="fe fe-more-vertical"></span></a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-auto"><a class="card-avatar" href="#"><img class="img-fluid" src="./images/project-2.jpg" alt="img projcet"/></a></div>
+                    <div class="col ml-n2"><a href="">
+                        <h5 class="card-title mb-1">Travels & Time</h5></a>
+                      <p class="card-text small text-muted">Updated 5hr ago</p>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdown"><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true"><span class="fe fe-more-vertical"></span></a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-auto"><a class="card-avatar" href="#"><img class="img-fluid" src="./images/project-3.jpg" alt="img projcet"/></a></div>
+                    <div class="col ml-n2"><a href="">
+                        <h5 class="card-title mb-1">Safari Exploration</h5></a>
+                      <p class="card-text small text-muted">Updated 5hr ago</p>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdown"><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true"><span class="fe fe-more-vertical"></span></a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-auto"><a class="card-avatar" href="#"><img class="img-fluid" src="./images/project-5.jpg" alt="img projcet"/></a></div>
+                    <div class="col ml-n2"><a href="">
+                        <h5 class="card-title mb-1">Personal Site</h5></a>
+                      <p class="card-text small text-muted">Updated 5hr ago</p>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdown"><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true"><span class="fe fe-more-vertical"></span></a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title">Performance</h4>
+                    </div>
+                    <div class="col-auto">
+                      <ul class="nav nav-tabs" id="performanceTab" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" id="all-per" data-toggle="tab" href="#all-performance" role="tab" aria-controls="all-performance" aria-selected="true">All</a></li>
+                        <li class="nav-item"><a class="nav-link" id="direct-per" data-toggle="tab" href="#direct-performance" role="tab" aria-controls="direct-performance" aria-selected="false">Direct</a></li>
+                        <li class="nav-item"><a class="nav-link" id="origanic-per" data-toggle="tab" href="#origanic-performance" role="tab" aria-controls="origanic-performance" aria-selected="false">Direct</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="performanceContent">
+                    <div class="tab-pane fade show active" id="all-performance" role="tabpanel" aria-labelledby="all-per">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" width="255" height="241"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="direct-performance" role="tabpanel" aria-labelledby="direct-per">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" width="255" height="241"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="origanic-performance" role="tabpanel" aria-labelledby="origanic-per">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" width="255" height="241"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-7 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h4 class="card-title">Performance</h4>
+                    </div>
+                    <div class="col-auto"><a class="btn btn-sm btn-white" href="#">Export</a></div>
+                  </div>
+                </div>
+                <div class="table-responsive mb-0" data-toggle="lists" data-lists-values="['goal-project', 'goal-status', 'goal-progress', 'goal-date']">
+                  <table class="table-sm table-nowrap card-table">
+                    <thead>
+                      <tr>
+                        <th><a class="text-muted sort" href="#" data-sort="goal-project">Goal</a></th>
+                        <th><a class="text-muted sort" href="#" data-sort="goal-status">Status</a></th>
+                        <th><a class="text-muted sort" href="#" data-sort="goal-progress">Progress</a></th>
+                        <th><a class="text-muted sort" href="#" data-sort="goal-date">Due date</a></th>
+                        <th class="text-right">Team</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list">
+                      <tr>
+                        <td class="goal-project">GDPR Compliance</td>
+                        <td class="goal-status">Completed</td>
+                        <td class="goal-progress">100%</td>
+                        <td class="goal-date">06/19/18</td>
+                        <td class="text-right">
+                          <div class="avatar-group d-flex justify-content-end"><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-1.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-2.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-3.jpg" alt="img team"/></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="goal-project">Plan design offsite</td>
+                        <td class="goal-status">Completed</td>
+                        <td class="goal-progress">100%</td>
+                        <td class="goal-date">	06/30/18</td>
+                        <td class="text-right">
+                          <div class="avatar-group d-flex justify-content-end"><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-1.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-2.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-3.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-4.jpg" alt="img team"/></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="goal-project">Release v1.2-Beta</td>
+                        <td class="goal-status">In progress</td>
+                        <td class="goal-progress">25%</td>
+                        <td class="goal-date">08/26/18</td>
+                        <td class="text-right">
+                          <div class="avatar-group d-flex justify-content-end"><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-1.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-2.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-3.jpg" alt="img team"/></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="goal-project">Update the API</td>
+                        <td class="goal-status">In progress</td>
+                        <td class="goal-progress">55%</td>
+                        <td class="goal-date">07/24/18</td>
+                        <td class="text-right">
+                          <div class="avatar-group d-flex justify-content-end"><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-1.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-2.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-3.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-4.jpg" alt="img team"/></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="goal-project">v1.2 Documentation</td>
+                        <td class="goal-status">Cancelled</td>
+                        <td class="goal-progress">0%</td>
+                        <td class="goal-date">06/25/18</td>
+                        <td class="text-right">
+                          <div class="avatar-group d-flex justify-content-end"><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-1.jpg" alt="img team"/></a><a class="avatar avatar-xs" href="#" data-toggle="tooltip" data-original-title="Dianna Smiley"><img class="avatar-img img-fluid rounded-circle" src="./images/avatar-2.jpg" alt="img team"/></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

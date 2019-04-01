@@ -23,6 +23,10 @@ a, .btn {
   color: #95aac9!important;
 }
 
+.rounded {
+  border-radius: .375rem!important;
+}
+
 @media (min-width: 768px){
   .navbar-vertical.navbar-expand-md>[class*=container] {
     flex-direction: column;

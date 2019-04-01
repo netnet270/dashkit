@@ -49,7 +49,298 @@ mixin content()
           each item in stats
             +stats-card({title: item.title , count: item.count, badge: item.badge, progress: item.progress, icon: item.icon})
           
+        .row
+          .col-lg-8.col-12
+            //- order 
+            .card
+              .card-header
+                .row.align-items-center
+                  .col
+                    h4.card-title Order
+                  .col-auto.mr-n3
+                    span.text-muted Show affiliate:
+                  .col-auto
 
-            
+              .card-body
+                .chart-order
+                  canvas( id= "orderChart" class ="" width="585" height= "300")
+          .col-lg-4.col-12
+            //- devices
+            .card
+              .card-header
+                .row.align-items-center
+                  .col
+                    h4.card-title Devices
+                  .col-auto
+                    ul#devicesTab.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                        a#all-tab.nav-link.active(data-toggle='tab', href='#all', role='tab', aria-controls='all', aria-selected='true') All
+                      li.nav-item
+                        a#direct-tab.nav-link(data-toggle='tab', href='#direct', role='tab', aria-controls='direct', aria-selected='false') Direct
+              
+              .card-body
+                #devicesContent.tab-content
+                  - var deviceChart = [{ datasets: [60, 25, 15] },{ datasets: [15, 45, 20] }]
+
+                  #all.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='all-tab')
+                    .chart.chart-appended
+                      canvas.js-devices-chart(width="255" height= "241", datasets = deviceChart[0] )
+
+                  #direct.tab-pane.fade(role='tabpanel', aria-labelledby='direct-tab')
+                    .chart.chart-appended
+                      canvas.js-devices-chart(width="255" height= "241", datasets = deviceChart[1] )
+
+                .chart-legend
+                  span.chart-legend__item
+                    i(class="chart-legend-indicator")
+                    | Desktop
+                  span.chart-legend__item
+                    i(class="chart-legend-indicator")
+                    | Tablet
+                  span.chart-legend__item
+                    i(class="chart-legend-indicator")
+                    | Mobile
+        .row
+          .col-lg-4.col-12
+            //- Project
+            .card
+              .card-header
+                .row.align-items-center
+                  .col
+                    h4.card-title Projects
+                  .col-auto
+                    a(href="#") View all
+              .card-body
+                .row.align-items-center
+                  .col-auto
+                    a.card-avatar(href="#")
+                      img.img-fluid(src="./images/project-1.jpg", alt="img projcet")
+                  .col.ml-n2
+                    a(href="")
+                      h5.card-title.mb-1 Homepage Redesign
+                    p.card-text.small.text-muted Updated 5hr ago
+                  .col-auto
+                    .dropdown
+                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                        span(class = "fe fe-more-vertical")
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                        a.dropdown-item(href="#") Something else here
+
+                .row.align-items-center
+                  .col-auto
+                    a.card-avatar(href="#")
+                      img.img-fluid(src="./images/project-2.jpg", alt="img projcet")
+                  .col.ml-n2
+                    a(href="")
+                      h5.card-title.mb-1 Travels & Time
+                    p.card-text.small.text-muted Updated 5hr ago
+                  .col-auto
+                    .dropdown
+                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                        span(class = "fe fe-more-vertical")
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                        a.dropdown-item(href="#") Something else here
+
+                .row.align-items-center
+                  .col-auto
+                    a.card-avatar(href="#")
+                      img.img-fluid(src="./images/project-3.jpg", alt="img projcet")
+                  .col.ml-n2
+                    a(href="")
+                      h5.card-title.mb-1 Safari Exploration
+                    p.card-text.small.text-muted Updated 5hr ago
+                  .col-auto
+                    .dropdown
+                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                        span(class = "fe fe-more-vertical")
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                        a.dropdown-item(href="#") Something else here
+
+                .row.align-items-center
+                  .col-auto
+                    a.card-avatar(href="#")
+                      img.img-fluid(src="./images/project-5.jpg", alt="img projcet")
+                  .col.ml-n2
+                    a(href="")
+                      h5.card-title.mb-1 Personal Site
+                    p.card-text.small.text-muted Updated 5hr ago
+                  .col-auto
+                    .dropdown
+                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                        span(class = "fe fe-more-vertical")
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                        a.dropdown-item(href="#") Something else here
+
+          .col-lg-8.col-12
+            //- performance
+            .card
+              .card-header
+                .row.align-items-center
+                  .col
+                    h4.card-title Performance
+                  .col-auto
+                    ul#performanceTab.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                        a#all-per.nav-link.active(data-toggle='tab', href='#all-performance', role='tab', aria-controls='all-performance', aria-selected='true') All
+                      li.nav-item
+                        a#direct-per.nav-link(data-toggle='tab', href='#direct-performance', role='tab', aria-controls='direct-performance', aria-selected='false') Direct
+                      li.nav-item
+                        a#origanic-per.nav-link(data-toggle='tab', href='#origanic-performance', role='tab', aria-controls='origanic-performance', aria-selected='false') Direct
+              
+              .card-body
+                #performanceContent.tab-content
+
+                  #all-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='all-per')
+                    .chart.chart-appended
+                      canvas.js-performance-chart(width="255" height= "241" )
+                  #direct-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='direct-per')
+                    .chart.chart-appended
+                      canvas.js-performance-chart(width="255" height= "241")
+                  #origanic-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='origanic-per')
+                    .chart.chart-appended
+                      canvas.js-performance-chart(width="255" height= "241" )
+
+        .row
+          .col-lg-7.col-12
+            //- goals
+            .card
+              .card-header
+                .row.align-items-center
+                  .col
+                    h4.card-title Performance
+                  .col-auto
+                    a(href="#" class="btn btn-sm btn-white") Export
+                
+                -
+                  var dataGoals = [
+                    {
+                      title: "GDPR Compliance",
+                      status: "Completed",
+                      progress: "100%",
+                      date: "06/19/18",
+                      team : [
+                        {
+                          person: "./images/avatar-1.jpg"
+                        },
+                        {
+                          person: "./images/avatar-2.jpg"
+                        },
+                        {
+                          person: "./images/avatar-3.jpg"
+                        }
+                      ]
+                    },
+                    {
+                      title: "Plan design offsite",
+                      status: "Completed",
+                      progress: "100%",
+                      date: "	06/30/18",
+                      team : [
+                        {
+                          person: "./images/avatar-1.jpg"
+                        },
+                        {
+                          person: "./images/avatar-2.jpg"
+                        },
+                        {
+                          person: "./images/avatar-3.jpg"
+                        },
+                        {
+                          person: "./images/avatar-4.jpg"
+                        }
+                      ]
+                    },
+                    {
+                      title: "Release v1.2-Beta",
+                      status: "In progress",
+                      progress: "25%",
+                      date: "08/26/18",
+                      team : [
+                        {
+                          person: "./images/avatar-1.jpg"
+                        },
+                        {
+                          person: "./images/avatar-2.jpg"
+                        },
+                        {
+                          person: "./images/avatar-3.jpg"
+                        }
+                      ]
+                    },
+                    {
+                      title: "Update the API",
+                      status: "In progress",
+                      progress: "55%",
+                      date: "07/24/18",
+                      team : [
+                        {
+                          person: "./images/avatar-1.jpg"
+                        },
+                        {
+                          person: "./images/avatar-2.jpg"
+                        },
+                        {
+                          person: "./images/avatar-3.jpg"
+                        },
+                        {
+                          person: "./images/avatar-4.jpg"
+                        }
+                      ]
+                    },
+                    {
+                      title: "v1.2 Documentation",
+                      status: "Cancelled",
+                      progress: "0%",
+                      date: "06/25/18",
+                      team : [
+                        {
+                          person: "./images/avatar-1.jpg"
+                        },
+                        {
+                          person: "./images/avatar-2.jpg"
+                        }
+                      ]
+                    }
+                  ]
+
+              .table-responsive.mb-0(data-toggle = "lists", data-lists-values= "['goal-project', 'goal-status', 'goal-progress', 'goal-date']")
+                table.table-sm.table-nowrap.card-table
+                  thead
+                    tr
+                      th
+                        a.text-muted.sort(href="#" data-sort = "goal-project") Goal
+                      th
+                        a.text-muted.sort(href="#" data-sort = "goal-status") Status
+                      th
+                        a.text-muted.sort(href="#" data-sort = "goal-progress") Progress
+                      th
+                        a.text-muted.sort(href="#" data-sort = "goal-date") Due date
+                      th.text-right Team
+                  tbody.list
+                    each item in dataGoals
+                      tr
+                        td.goal-project= item.title
+                        td.goal-status= item.status
+                        td.goal-progress= item.progress
+                        td.goal-date= item.date
+                        td.text-right
+                          .avatar-group.d-flex.justify-content-end
+                            each img in item.team
+                              a(href="#" class ="avatar avatar-xs" data-toggle= "tooltip" data-original-title= "Dianna Smiley")
+                                img(src= img.person, alt="img team" class="avatar-img img-fluid rounded-circle")
+                                
+
+              
+                
+
+
 
             
