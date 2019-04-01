@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $('.goal-table').DataTable();
   menu();
   chartOrder();
   chartDevices();
@@ -8,11 +9,17 @@ $(document).ready(function () {
 
   function menu(){
     $('.js-navbar-link').on('click', function(){
+      var menuItem = $(this).parent('.js-navbar-item');
+
       if($(this).hasClass('navbar-link--active')){
+        $(this).removeClass('navbar-link--active');
       }
       else{
-        $('.js-submenu').slideUp();
-      }
+        $('.js-navbar-link').removeClass('navbar-link--active')
+        $('.js-submenu').slideUp(300);
+        menuItem.children('.js-submenu').slideDown(400);
+        $(this).addClass('navbar-link--active');
+      } 
     })
   }
   

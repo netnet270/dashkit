@@ -189,11 +189,11 @@
   .modal-dialog.modal-dialog-vertical.fixed-left(role = "document")
     .modal-content
       .modal-body
-        form.mb-4(action="#")
-          .input-group
-            input(type="text" class= "form-control" placeholder= "Search")
-            .input-group-text
-              span(class="fe fe-search")
+        form.modal-search-form
+          .input-group-prepend
+            i.fe.fe-search
+          input(type="search" class="form-control form-control-prepended search" placeholder="Search")
+    
         .my-n2
           ul.list-group
             li.group-item

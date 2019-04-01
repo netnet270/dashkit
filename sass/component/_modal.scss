@@ -8,6 +8,8 @@
 
 .modal-body {
   padding: 24px;
+  overflow-y: auto;
+  height: inherit;
 }
 
 .modal-content {
@@ -44,6 +46,15 @@
 }
 
 #modalDemo {
+  &.modal.fade .modal-dialog-vertical {
+    transform: translateX(100%);
+    margin-left: auto;
+  }
+
+  &.modal.show .modal-dialog-vertical {
+    transform: translateX(0);
+  }
+
   .modal-top {
     &__title {
       font-size: 20px;
@@ -52,16 +63,12 @@
       line-height: 22px;
     }
 
-    &__intro {
-      font-size: 15px;
-    }
   }
 
   .modal-color-scheme,
   .modal-nav-position,
   .modal-sidebar-color{
     &__title {
-      font-size: 15px;
       font-weight: 500;
       letter-spacing: -0.3px;
     }
@@ -88,17 +95,16 @@
 }
 
 #modalAcivity {
-  .modal-dialog-vertical {
-    // transform: translateX(-100%);
+
+  &.modal.fade .modal-dialog-vertical {
+    transform: translateX(-100%);
   }
 
-  .show {
-    .modal-dialog-vertical {
-      // transform: translateX(0);
-    }
+  &.modal.show .modal-dialog-vertical {
+    transform: translateX(0);
   }
 
-  .media {
+  .media {  
     &__img {
       width: 40px;
       height: 40px;
@@ -109,7 +115,6 @@
     padding: 24px;
 
     .modal-title {
-      font-size: 15px;
       font-weight: 500;
       letter-spacing: -0.3px;
     }
@@ -119,11 +124,6 @@
     padding: 12px 0;
     border-bottom: 1px solid #e3ebf6;
     background-color: transparent;
-  }
-
-  .modal-body {
-    overflow-y: auto;
-    height: inherit;
   }
 
   .small {
@@ -137,6 +137,13 @@
 }
 
 #modalSearch {
+  &.modal.fade .modal-dialog-vertical {
+    transform: translateX(-100%);
+  }
+
+  &.modal.show .modal-dialog-vertical {
+    transform: translateX(0);
+  }
   .media {
     &__img {
       width: 48px;
@@ -173,30 +180,41 @@
     vertical-align: middle;
   }
 
-  .input-group {
-    input {
-      padding-left: 36px;
-      border-radius: .375rem;
-      padding-top: 20px;
-      padding-bottom: 20px;
 
-      &:focus {
-        color: #12263f;
-        background-color: #fff;
-        border-color: #2c7be5;
-      }
+  .modal-search-form {
+    margin-bottom: 22px;
+    position: relative;
+
+    .input-group-prepend {
+      padding: 9px 12px;
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      z-index: 10;
+      color:#95aac9;
     }
 
-    .input-group-text {
-      position: absolute;
-      background: none;
-      border: none;
-      top: 7px;
-      color: #95aac9;
+    input[type="search"] {
+      width: 100%;
+      padding-left: 38px;
+      background-color: #fff;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      height: auto;
+      font-weight: 400;
+      border-radius: 6px;
+
+      &::placeholder {
+        color: #95aac9;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color:#2c7be5 ;
+      }
     }
   }
 }
 
-::placeholder {
-  color: #95aac9;
-}

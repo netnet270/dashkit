@@ -52,11 +52,11 @@ mixin content()
         .row
           .col-lg-8.col-12
             //- order 
-            .card
+            .card.card-order
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-title Order
+                    h4.card-header-title Order
                   .col-auto.mr-n3
                     span.text-muted Show affiliate:
                   .col-auto
@@ -66,11 +66,11 @@ mixin content()
                   canvas( id= "orderChart" class ="" width="585" height= "300")
           .col-lg-4.col-12
             //- devices
-            .card
+            .card.card-devices
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-title Devices
+                    h4.card-header-title Devices
                   .col-auto
                     ul#devicesTab.nav.nav-tabs(role='tablist')
                       li.nav-item
@@ -103,89 +103,92 @@ mixin content()
         .row
           .col-lg-4.col-12
             //- Project
-            .card
+            .card.card-project
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-title Projects
+                    h4.card-header-title Projects
                   .col-auto
-                    a(href="#") View all
+                    a.card-header-link.small(href="#!") View all
               .card-body
                 .row.align-items-center
                   .col-auto
-                    a.card-avatar(href="#")
-                      img.img-fluid(src="./images/project-1.jpg", alt="img projcet")
+                    a.card-avatar(href="#!")
+                      img.img-fluid.rounded(src="./images/project-1.jpg", alt="img projcet")
                   .col.ml-n2
                     a(href="")
                       h5.card-title.mb-1 Homepage Redesign
                     p.card-text.small.text-muted Updated 5hr ago
                   .col-auto
                     .dropdown
-                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                      a(href="#!" class= "dropdown-toggle dropdown-ellipses" role= "button" data-toggle = "dropdown" aria-expanded= "true")
                         span(class = "fe fe-more-vertical")
-                      .dropdown-menu
-                        a.dropdown-item(href="#") Action
-                        a.dropdown-item(href="#") Another action
-                        a.dropdown-item(href="#") Something else here
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href="#!") Action
+                        a.dropdown-item(href="#!") Another action
+                        a.dropdown-item(href="#!") Something else here
 
+                hr.card-line
                 .row.align-items-center
                   .col-auto
-                    a.card-avatar(href="#")
-                      img.img-fluid(src="./images/project-2.jpg", alt="img projcet")
+                    a.card-avatar(href="#!")
+                      img.img-fluid.rounded(src="./images/project-2.jpg", alt="img projcet")
                   .col.ml-n2
                     a(href="")
                       h5.card-title.mb-1 Travels & Time
                     p.card-text.small.text-muted Updated 5hr ago
                   .col-auto
                     .dropdown
-                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                      a(href="#!" class= "dropdown-toggle dropdown-ellipses" role= "button" data-toggle = "dropdown" aria-expanded= "true")
                         span(class = "fe fe-more-vertical")
-                      .dropdown-menu
-                        a.dropdown-item(href="#") Action
-                        a.dropdown-item(href="#") Another action
-                        a.dropdown-item(href="#") Something else here
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href="#!") Action
+                        a.dropdown-item(href="#!") Another action
+                        a.dropdown-item(href="#!") Something else here
+                hr.card-line
 
                 .row.align-items-center
                   .col-auto
-                    a.card-avatar(href="#")
-                      img.img-fluid(src="./images/project-3.jpg", alt="img projcet")
+                    a.card-avatar(href="#!")
+                      img.img-fluid.rounded(src="./images/project-3.jpg", alt="img projcet")
                   .col.ml-n2
                     a(href="")
                       h5.card-title.mb-1 Safari Exploration
                     p.card-text.small.text-muted Updated 5hr ago
                   .col-auto
                     .dropdown
-                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                      a(href="#!" class= "dropdown-toggle dropdown-ellipses" role= "button" data-toggle = "dropdown" aria-expanded= "true")
                         span(class = "fe fe-more-vertical")
-                      .dropdown-menu
-                        a.dropdown-item(href="#") Action
-                        a.dropdown-item(href="#") Another action
-                        a.dropdown-item(href="#") Something else here
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href="#!") Action
+                        a.dropdown-item(href="#!") Another action
+                        a.dropdown-item(href="#!") Something else here
+                hr.card-line
 
                 .row.align-items-center
                   .col-auto
-                    a.card-avatar(href="#")
-                      img.img-fluid(src="./images/project-5.jpg", alt="img projcet")
+                    a.card-avatar(href="#!")
+                      img.img-fluid.rounded(src="./images/project-5.jpg", alt="img projcet")
                   .col.ml-n2
                     a(href="")
                       h5.card-title.mb-1 Personal Site
                     p.card-text.small.text-muted Updated 5hr ago
                   .col-auto
                     .dropdown
-                      a(href="#" class= "dropdown-toggle" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                      a(href="#!" class= "dropdown-toggle dropdown-ellipses" role= "button" data-toggle = "dropdown" aria-expanded= "true")
                         span(class = "fe fe-more-vertical")
-                      .dropdown-menu
-                        a.dropdown-item(href="#") Action
-                        a.dropdown-item(href="#") Another action
-                        a.dropdown-item(href="#") Something else here
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href="#!") Action
+                        a.dropdown-item(href="#!") Another action
+                        a.dropdown-item(href="#!") Something else here
 
           .col-lg-8.col-12
             //- performance
-            .card
+            .card.card-performance
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-title Performance
+                    h4.card-header-title Performance
                   .col-auto
                     ul#performanceTab.nav.nav-tabs(role='tablist')
                       li.nav-item
@@ -211,13 +214,13 @@ mixin content()
         .row
           .col-lg-7.col-12
             //- goals
-            .card
+            .card.card-goals
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-title Performance
+                    h4.card-header-title Performance
                   .col-auto
-                    a(href="#" class="btn btn-sm btn-white") Export
+                    a(href="#!" class="btn btn-sm btn-white") Export
                 
                 -
                   var dataGoals = [
@@ -312,17 +315,17 @@ mixin content()
                   ]
 
               .table-responsive.mb-0(data-toggle = "lists", data-lists-values= "['goal-project', 'goal-status', 'goal-progress', 'goal-date']")
-                table.table-sm.table-nowrap.card-table
+                table.goal-table.table-sm.table-nowrap.card-table
                   thead
                     tr
                       th
-                        a.text-muted.sort(href="#" data-sort = "goal-project") Goal
+                        a.text-muted.sort(href="#!" data-sort = "goal-project") Goal
                       th
-                        a.text-muted.sort(href="#" data-sort = "goal-status") Status
+                        a.text-muted.sort(href="#!" data-sort = "goal-status") Status
                       th
-                        a.text-muted.sort(href="#" data-sort = "goal-progress") Progress
+                        a.text-muted.sort(href="#!" data-sort = "goal-progress") Progress
                       th
-                        a.text-muted.sort(href="#" data-sort = "goal-date") Due date
+                        a.text-muted.sort(href="#!" data-sort = "goal-date") Due date
                       th.text-right Team
                   tbody.list
                     each item in dataGoals
@@ -334,13 +337,16 @@ mixin content()
                         td.text-right
                           .avatar-group.d-flex.justify-content-end
                             each img in item.team
-                              a(href="#" class ="avatar avatar-xs" data-toggle= "tooltip" data-original-title= "Dianna Smiley")
+                              a(href="#!" class ="avatar avatar-xs" data-toggle= "tooltip" data-original-title= "Dianna Smiley")
                                 img(src= img.person, alt="img team" class="avatar-img img-fluid rounded-circle")
-                                
 
-              
-                
+          .col-lg-5.col-12
+            .card.card-img
+              .card-body.text-center
+                .row.justify-content-center
+                  .col-lg-10.col-12
+                    img.img-fluid.mt-n5.mb-4(src="./images/happiness.svg", alt="img")
 
-
-
-            
+                    h4.card-img-title.mb-2 We released 2008 new versions of our theme for glory.
+                    p.card-text.text-muted This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.
+                    a(href="#!" class="btn btn-primary") Try it for free

@@ -191,14 +191,14 @@ mixin main-menu()
           href= item.href ? item.href : "#", 
           data-toggle= item.toggle ? "" : "collapse", 
           role ="button", 
-          aria-expanded ="false", 
+          aria-expanded = item.active ? "true" : "false",
           aria-controls= item.id
         )
           i(class= item.icon)
           |#{item.title}
           
         if item.submenu
-          .collapse(id= item.id)
+          .collapse(id= item.id , class= item.active ? "show" : "")
             ul.nav.sub-menu.flex-column.js-submenu
               each sub in item.submenu
                 li.navbar-item.js-sub-item(
