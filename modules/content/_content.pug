@@ -5,7 +5,7 @@
 mixin content()
   .js-main-content.main-content
       //- header
-
+    
       header.header
         .container-fluid
           .header__body
@@ -48,9 +48,9 @@ mixin content()
         .row
           each item in stats
             +stats-card({title: item.title , count: item.count, badge: item.badge, progress: item.progress, icon: item.icon})
-          
+        
         .row
-          .col-lg-8.col-12
+          .col-12.col-xl-8
             //- order 
             .card.card-order
               .card-header
@@ -59,12 +59,16 @@ mixin content()
                     h4.card-header-title Order
                   .col-auto.mr-n3
                     span.text-muted Show affiliate:
+                    
                   .col-auto
+                    label.switch
+                      input(type="checkbox" id="cardToggle")
+                      span.slider.round
 
               .card-body
                 .chart-order
                   canvas( id= "orderChart" class ="" width="585" height= "300")
-          .col-lg-4.col-12
+          .col-xl-4.col-12
             //- devices
             .card.card-devices
               .card-header
@@ -72,36 +76,31 @@ mixin content()
                   .col
                     h4.card-header-title Devices
                   .col-auto
-                    ul#devicesTab.nav.nav-tabs(role='tablist')
-                      li.nav-item
-                        a#all-tab.nav-link.active(data-toggle='tab', href='#all', role='tab', aria-controls='all', aria-selected='true') All
-                      li.nav-item
-                        a#direct-tab.nav-link(data-toggle='tab', href='#direct', role='tab', aria-controls='direct', aria-selected='false') Direct
-              
+                    ul.card-header-tabs.list-inline
+                      li.tabs-item.list-inline-item
+                        a(href="#!").active.all-tab.small All
+                      li.tabs-item.list-inline-item
+                        a(href="#!").direct-tab.small Direct
               .card-body
-                #devicesContent.tab-content
-                  - var deviceChart = [{ datasets: [60, 25, 15] },{ datasets: [15, 45, 20] }]
-
-                  #all.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='all-tab')
-                    .chart.chart-appended
-                      canvas.js-devices-chart(width="255" height= "241", datasets = deviceChart[0] )
-
-                  #direct.tab-pane.fade(role='tabpanel', aria-labelledby='direct-tab')
-                    .chart.chart-appended
-                      canvas.js-devices-chart(width="255" height= "241", datasets = deviceChart[1] )
-
+                - var deviceChart = [{ datasets: [60, 25, 15] },{ datasets: [15, 45, 20] }]
+                .chart.chart-appended
+                  canvas#devicesChart.js-devices-chart(width="255" height= "241", datasets= deviceChart[0])
+                  
                 .chart-legend
                   span.chart-legend__item
-                    i(class="chart-legend-indicator")
+                    span.icon-dot.cl-desktop
+                      i(class="fas fa-circle")
                     | Desktop
                   span.chart-legend__item
-                    i(class="chart-legend-indicator")
+                    span.icon-dot.cl-tablet
+                      i(class="fas fa-circle")
                     | Tablet
                   span.chart-legend__item
-                    i(class="chart-legend-indicator")
+                    span.icon-dot.cl-mobile
+                      i(class="fas fa-circle")
                     | Mobile
         .row
-          .col-lg-4.col-12
+          .col-xl-4.col-12
             //- Project
             .card.card-project
               .card-header
@@ -182,7 +181,7 @@ mixin content()
                         a.dropdown-item(href="#!") Another action
                         a.dropdown-item(href="#!") Something else here
 
-          .col-lg-8.col-12
+          .col-xl-8.col-12
             //- performance
             .card.card-performance
               .card-header
@@ -190,35 +189,26 @@ mixin content()
                   .col
                     h4.card-header-title Performance
                   .col-auto
-                    ul#performanceTab.nav.nav-tabs(role='tablist')
-                      li.nav-item
-                        a#all-per.nav-link.active(data-toggle='tab', href='#all-performance', role='tab', aria-controls='all-performance', aria-selected='true') All
-                      li.nav-item
-                        a#direct-per.nav-link(data-toggle='tab', href='#direct-performance', role='tab', aria-controls='direct-performance', aria-selected='false') Direct
-                      li.nav-item
-                        a#origanic-per.nav-link(data-toggle='tab', href='#origanic-performance', role='tab', aria-controls='origanic-performance', aria-selected='false') Direct
+                    ul.card-header-tabs.list-inline
+                      li.tabs-item.list-inline-item
+                        a(href="#!").active.all-tab.small All
+                      li.tabs-item.list-inline-item
+                        a(href="#!").direct-tab.small Direct
+                      li.tabs-item.list-inline-item
+                        a(href="#!").direct-tab.small Originic
               
               .card-body
-                #performanceContent.tab-content
-
-                  #all-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='all-per')
-                    .chart.chart-appended
-                      canvas.js-performance-chart(width="255" height= "241" )
-                  #direct-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='direct-per')
-                    .chart.chart-appended
-                      canvas.js-performance-chart(width="255" height= "241")
-                  #origanic-performance.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='origanic-per')
-                    .chart.chart-appended
-                      canvas.js-performance-chart(width="255" height= "241" )
+                .chart.chart-appended
+                  canvas#performanceChart.js-performance-chart(width="585" height= "300")
 
         .row
-          .col-lg-7.col-12
+          .col-xl-7.col-12
             //- goals
             .card.card-goals
               .card-header
                 .row.align-items-center
                   .col
-                    h4.card-header-title Performance
+                    h4.card-header-title Goals
                   .col-auto
                     a(href="#!" class="btn btn-sm btn-white") Export
                 
@@ -231,13 +221,16 @@ mixin content()
                       date: "06/19/18",
                       team : [
                         {
-                          person: "./images/avatar-1.jpg"
+                          person: "./images/avatar-1.jpg",
+                          title: "Dianna Smiley"
                         },
                         {
-                          person: "./images/avatar-2.jpg"
+                          person: "./images/avatar-2.jpg",
+                          title: "Ab Hadley"
                         },
                         {
-                          person: "./images/avatar-3.jpg"
+                          person: "./images/avatar-3.jpg",
+                          title: "Adolfo Hess"
                         }
                       ]
                     },
@@ -248,16 +241,20 @@ mixin content()
                       date: "	06/30/18",
                       team : [
                         {
-                          person: "./images/avatar-1.jpg"
+                          person: "./images/avatar-1.jpg",
+                          title: "Dianna Smiley"
                         },
                         {
-                          person: "./images/avatar-2.jpg"
+                          person: "./images/avatar-2.jpg",
+                          title: "Ab Hadley"
                         },
                         {
-                          person: "./images/avatar-3.jpg"
+                          person: "./images/avatar-3.jpg",
+                          title: "Adolfo Hess"
                         },
                         {
-                          person: "./images/avatar-4.jpg"
+                          person: "./images/avatar-4.jpg",
+                          title: "Daniela Dewitt"
                         }
                       ]
                     },
@@ -268,13 +265,16 @@ mixin content()
                       date: "08/26/18",
                       team : [
                         {
-                          person: "./images/avatar-1.jpg"
+                          person: "./images/avatar-1.jpg",
+                          title: "Dianna Smiley"
                         },
                         {
-                          person: "./images/avatar-2.jpg"
+                          person: "./images/avatar-2.jpg",
+                          title: "Ab Hadley"
                         },
                         {
-                          person: "./images/avatar-3.jpg"
+                          person: "./images/avatar-3.jpg",
+                          title: "Adolfo Hess"
                         }
                       ]
                     },
@@ -285,16 +285,20 @@ mixin content()
                       date: "07/24/18",
                       team : [
                         {
-                          person: "./images/avatar-1.jpg"
+                          person: "./images/avatar-1.jpg",
+                          title: "Dianna Smiley"
                         },
                         {
-                          person: "./images/avatar-2.jpg"
+                          person: "./images/avatar-2.jpg",
+                          title: "Ab Hadley"
                         },
                         {
-                          person: "./images/avatar-3.jpg"
+                          person: "./images/avatar-3.jpg",
+                          title: "Adolfo Hess"
                         },
                         {
-                          person: "./images/avatar-4.jpg"
+                          person: "./images/avatar-4.jpg",
+                          title: "Daniela Dewitt"
                         }
                       ]
                     },
@@ -305,10 +309,12 @@ mixin content()
                       date: "06/25/18",
                       team : [
                         {
-                          person: "./images/avatar-1.jpg"
+                          person: "./images/avatar-1.jpg",
+                          title: "Dianna Smiley"
                         },
                         {
-                          person: "./images/avatar-2.jpg"
+                          person: "./images/avatar-2.jpg",
+                          title: "Ab Hadley"
                         }
                       ]
                     }
@@ -327,20 +333,39 @@ mixin content()
                       th
                         a.text-muted.sort(href="#!" data-sort = "goal-date") Due date
                       th.text-right Team
+                      th.text-right
                   tbody.list
                     each item in dataGoals
                       tr
                         td.goal-project= item.title
-                        td.goal-status= item.status
+                        td.goal-status
+                          if item.status == "In progress"
+                            span(class="text-warning icon-dot mr-1")
+                              i(class="fas fa-circle")
+                          if item.status == "Completed"
+                            span(class="text-success icon-dot mr-1")
+                              i(class="fas fa-circle")
+                          if item.status == "Cancelled" 
+                            span(class="text-danger icon-dot mr-1")
+                              i(class="fas fa-circle")
+
+                          | #{item.status}
                         td.goal-progress= item.progress
                         td.goal-date= item.date
                         td.text-right
                           .avatar-group.d-flex.justify-content-end
                             each img in item.team
-                              a(href="#!" class ="avatar avatar-xs" data-toggle= "tooltip" data-original-title= "Dianna Smiley")
+                              a(href="#!" class ="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title= img.title)
                                 img(src= img.person, alt="img team" class="avatar-img img-fluid rounded-circle")
-
-          .col-lg-5.col-12
+                        td.text-right 
+                          .dropdown
+                            a(href="#!" class= "dropdown-toggle dropdown-ellipses" role= "button" data-toggle = "dropdown" aria-expanded= "true")
+                              span(class = "fe fe-more-vertical")
+                            .dropdown-menu.dropdown-menu-right
+                              a.dropdown-item(href="#!") Action
+                              a.dropdown-item(href="#!") Another action
+                              a.dropdown-item(href="#!") Something else here
+          .col-xl-5.col-12
             .card.card-img
               .card-body.text-center
                 .row.justify-content-center

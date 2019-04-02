@@ -36,16 +36,16 @@
               title: 'Posts'
             },
             {
-              title: 'Groups'
+              title: 'Projects'
+            },
+            {
+              title: 'Team'
             },
             {
               title: 'Groups'
             },
             {
-              title: 'Groups'
-            },
-            {
-              title: 'Groups'
+              title: 'Posts'
             }
           ]
         }, 
@@ -179,54 +179,61 @@
   ]
 
 mixin main-menu()
+  
   ul.navbar-nav.js-navbar-nav
-    each item in menus
-      li.navbar-item.js-navbar-item(
-        class=item.submenu ? 'navbar-item--has-children' : '', 
-        class=item.active ? 'navbar-item--active' : ''
-      )
-        a.navbar-link.js-navbar-link(
-          class=item.submenu ? 'navbar-link--has-children' : '',
-          class=item.active ? 'navbar-link--active' : ''
-          href= item.href ? item.href : "#", 
-          data-toggle= item.toggle ? "" : "collapse", 
-          role ="button", 
-          aria-expanded = item.active ? "true" : "false",
-          aria-controls= item.id
+    #accordion
+      each item in menus
+        li.navbar-item.js-navbar-item(
+          class=item.submenu ? 'navbar-item--has-children' : '', 
+          class=item.active ? 'navbar-item--active' : ''
         )
-          i(class= item.icon)
-          |#{item.title}
-          
-        if item.submenu
-          .collapse(id= item.id , class= item.active ? "show" : "")
-            ul.nav.sub-menu.flex-column.js-submenu
-              each sub in item.submenu
-                li.navbar-item.js-sub-item(
-                  class=sub.childmenu ? 'navbar-item--has-children' : '',
-                  class= sub.active ? 'navbar-item--active' : ''
-                )
-                  a.navbar-link(
-                    href= sub.href ? sub.href : "#", 
-                    class=sub.childmenu ? 'navbar-link--has-children' : '',
-                    class= sub.active ? 'navbar-link--active' : ''
-                    data-toggle= sub.toggle ? "modal" : "collapse",
-                    role ="button", 
-                    aria-expanded ="false", 
-                    aria-controls= sub.id
-                  )= sub.title
-                    if sub.badge
-                      span.badge.badge--soft-success.ml-auto= sub.badge
+          a.navbar-link.js-navbar-link(
+            class=item.submenu ? 'navbar-link--has-children' : '',
+            class=item.active ? 'navbar-link--active' : ''
+            href= item.href ? item.href : "#", 
+            data-toggle= item.toggle ? "" : "collapse", 
+            role ="button", 
+            aria-expanded = item.active ? "true" : "false",
+            aria-controls= item.id
+          )
+            i(class= item.icon)
+            |#{item.title}
+            
+          if item.submenu
+            .collapse(
+              id= item.id , 
+              class= item.active ? "show" : "",
+              data-parent="#accordion"
+              )
+              ul.nav.sub-menu.flex-column.js-submenu
+                #subMenu
+                  each sub in item.submenu
+                    li.navbar-item.js-sub-item(
+                      class=sub.childmenu ? 'navbar-item--has-children' : '',
+                      class= sub.active ? 'navbar-item--active' : ''
+                    )
+                      a.navbar-link(
+                        href= sub.href ? sub.href : "#", 
+                        class=sub.childmenu ? 'navbar-link--has-children' : '',
+                        class= sub.active ? 'navbar-link--active' : ''
+                        data-toggle= sub.toggle ? "modal" : "collapse",
+                        role ="button", 
+                        aria-expanded ="false", 
+                        aria-controls= sub.id
+                      )= sub.title
+                        if sub.badge
+                          span.badge.badge--soft-success.ml-auto= sub.badge
 
-                  if sub.childmenu
-                    .collapse(id= sub.id)
-                      ul.nav.child-menu.js-childmenu.flex-column
-                        each child in sub.childmenu
-                          li.navbar-item(
-                            class= child.active ? 'active' : ''
-                          )
-                            a.navbar-link(
-                              href= item.href ? item.href : "#", 
-                            )= child.title
+                      if sub.childmenu
+                        .collapse(id= sub.id, data-parent="#subMenu")
+                          ul.nav.child-menu.js-childmenu.flex-column
+                            each child in sub.childmenu
+                              li.navbar-item(
+                                class= child.active ? 'active' : ''
+                              )
+                                a.navbar-link(
+                                  href= item.href ? item.href : "#", 
+                                )= child.title
 
 -
   var subs = [

@@ -7,7 +7,7 @@ mixin sidebar()
     nav.navbar.left-sidebar__vertical.navbar-vertical.navbar-expand-md.navbar-light
       .container-fluid
         //- Toggle
-        button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#collapsibleNavId', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+        button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
 
         //- Logo
@@ -17,29 +17,28 @@ mixin sidebar()
         
         //- User
         .left-sidebar__user.d-md-none
-          //- Dropdown
-          .dropdown
-            //-Toggle
-            a#sidebarIcon.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              .avatar.avatar-sm.avatar-online
-                img.avatar-img.rounded-circle(src='./images/avatar-1.jpg', alt='img avatar')
-            //-Menu
-            .dropdown-menu.dropdown-menu-right(aria-labelledby='sidebarIcon')
-              a.dropdown-item(href='#') Profile
-              a.dropdown-item(href='#') Settings
-              hr.dropdown-divider
-              a.dropdown-item(href='#') Logout
+          .user-profile
+            //- Dropdown
+            .dropdown
+              //-Toggle
+              a(class="dropdown-toggle", id="sidebarIconCopy", href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                .user-profile__avatar.avatar-sm.avatar-online
+                  img.user-profile__img.rounded-circle(src='./images/avatar-1.jpg', alt='avatar user')
+
+              //-Menu
+              .dropdown-menu.dropdown-menu-right(aria-labelledby='sidebarIcon')
+                a.dropdown-item(href='#') Profile
+                a.dropdown-item(href='#') Settings
+                hr.dropdown-divider
+                a.dropdown-item(href='#') Logout
 
         //- Collaspe
         .collapse.navbar-collapse#navbarCollapse
-          
-          //- form
-          form.mt-4.mb-3.d-md-none
-            .input-group.input-group-rounded.input-group-merge
-              input.form-control.form-control-rounded.form-control-prepended(type='search', placeholder='Search', aria-label='Search')
-              .input-group-prepend
-                .input-group-text
-                  span(class= "fe.fe-search")
+          form.search-form.mt-4.mb-3.d-md-none
+            .input-group-prepend
+              i.fe.fe-search
+            input(type="search" class="form-control form-control-prepended search" placeholder="Search")
+
           //-main-menu
           +main-menu()
 
