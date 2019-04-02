@@ -67,7 +67,7 @@ mixin content()
 
               .card-body
                 .chart-order
-                  canvas( id= "orderChart" class ="" width="585" height= "300")
+                  canvas( id= "orderChart" width="585" height= "300")
           .col-xl-4.col-12
             //- devices
             .card.card-devices
@@ -77,8 +77,8 @@ mixin content()
                     h4.card-header-title Devices
                   .col-auto
                     ul.card-header-tabs.list-inline
-                      li.tabs-item.list-inline-item
-                        a(href="#!").active.all-tab.small All
+                      li.tabs-item.list-inline-item.active
+                        a(href="#!").all-tab.small All
                       li.tabs-item.list-inline-item
                         a(href="#!").direct-tab.small Direct
               .card-body

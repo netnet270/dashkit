@@ -7,7 +7,7 @@ mixin sidebar()
     nav.navbar.left-sidebar__vertical.navbar-vertical.navbar-expand-md.navbar-light
       .container-fluid
         //- Toggle
-        button.navbar-toggler.d-lg-none(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+        button.navbar-toggler.d-lg-none(type='button' data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
           span.navbar-toggler-icon
 
         //- Logo
@@ -33,7 +33,7 @@ mixin sidebar()
                 a.dropdown-item(href='#') Logout
 
         //- Collaspe
-        .collapse.navbar-collapse#navbarCollapse
+        .collapse.navbar-collapse(id = "navbarCollapse")
           form.search-form.mt-4.mb-3.d-md-none
             .input-group-prepend
               i.fe.fe-search

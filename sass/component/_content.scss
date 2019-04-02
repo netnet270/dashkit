@@ -16,11 +16,6 @@ body {
   margin-left: 250px;
   width: calc(100% - 250px);
 
-  .container-fluid {
-    padding-left: 36px;
-    padding-right: 36px
-  }
-
   .card {
     margin-bottom: 1.5rem;
     border-color: $border-card;
@@ -207,7 +202,28 @@ body {
 }
 
 //-------- Devices ------------
-
+.card-devices {
+  .card-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    .card-header-tabs{
+      margin-bottom: 0px;
+      margin-top: 0px;
+      
+      .tabs-item {
+        line-height: 22.5px;
+        padding: 19px 0;
+      }
+      .tabs-item.active {
+        color: #12263f;
+        background-color: transparent;
+        border-bottom: 1px solid #2c7be5;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
 .chart-legend {
   display: flex;
   justify-content: center;
