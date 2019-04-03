@@ -76,16 +76,23 @@ mixin content()
                   .col
                     h4.card-header-title Devices
                   .col-auto
-                    ul.card-header-tabs.list-inline
-                      li.tabs-item.list-inline-item.active
-                        a(href="#!").all-tab.small All
+                    ul.card-header-tabs.nav.nav-tabs(role= "tablist")
+                      li.tabs-item
+                        a(href="#deviceChart1" role="tab" data-toggle="tab").active.small All
                       li.tabs-item.list-inline-item
-                        a(href="#!").direct-tab.small Direct
+                        a(href="#deviceChart2" role="tab" data-toggle="tab").direct-tab.small Direct
               .card-body
+                
                 - var deviceChart = [{ datasets: [60, 25, 15] },{ datasets: [15, 45, 20] }]
-                .chart.chart-appended
-                  canvas#devicesChart.js-devices-chart(width="255" height= "241", datasets= deviceChart[0])
-                  
+                .tab-content
+                  .tab-pane.active#deviceChart1
+                    .chart.chart-appended
+                      canvas#devicesChart.js-devices-chart(width="255" height= "241", datasets= deviceChart[0])
+
+                  .tab-pane#deviceChart2
+                    .chart.chart-appended
+                      canvas#devicesChart.js-devices-chart(width="255" height= "241", datasets= deviceChart[1])
+
                 .chart-legend
                   span.chart-legend__item
                     span.icon-dot.cl-desktop
@@ -189,17 +196,28 @@ mixin content()
                   .col
                     h4.card-header-title Performance
                   .col-auto
-                    ul.card-header-tabs.list-inline
+                    ul.card-header-tabs.nav.nav-tabs(role= "tablist")
+                      li.tabs-item
+                        a(href="#performanceChart1" role="tab" data-toggle="tab").active.small All
                       li.tabs-item.list-inline-item
-                        a(href="#!").active.all-tab.small All
+                        a(href="#performanceChart2" role="tab" data-toggle="tab").small Direct
                       li.tabs-item.list-inline-item
-                        a(href="#!").direct-tab.small Direct
-                      li.tabs-item.list-inline-item
-                        a(href="#!").direct-tab.small Originic
+                        a(href="#performanceChart3" role="tab" data-toggle="tab").small Origanic
               .card-body
-                .chart.chart-appended
-                  canvas#performanceChart.js-performance-chart(width="585" height= "300")
+                - var perChart = [{datasets: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]},{datasets: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]},{ datasets:[25, 10, 20, 10, 17, 10, 18, 20, 35, 25, 20, 32]}]
+                
+                .tab-content
+                  .tab-pane.active#performanceChart1
+                    .chart.chart-appended
+                      canvas#performanceChart.js-performance-chart(width="585" height= "300", datasets= perChart[0])
 
+                  .tab-pane#performanceChart2
+                    .chart.chart-appended
+                      canvas#performanceChart.js-performance-chart(width="585" height= "300", datasets= perChart[1])
+
+                  .tab-pane#performanceChart3
+                    .chart.chart-appended
+                      canvas#performanceChart.js-performance-chart(width="585" height= "300", datasets= perChart[2])
         .row
           .col-xl-7.col-12
             //- goals

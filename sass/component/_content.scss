@@ -17,9 +17,9 @@ body {
   width: calc(100% - 250px);
 
   .card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     border-color: $border-card;
-    box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+    box-shadow: 0 12px 24px rgba(18,38,63,.03);
     border-radius: 10px;
 
     .card-header {
@@ -33,18 +33,20 @@ body {
         font-weight: 500;
         letter-spacing: -0.3px;
       }
-
+      
       .card-header-tabs{
         margin: -0.5rem 0;
         .tabs-item {
+         
           .active {
             color: #12263f;
             background-color: transparent;
-            border-color: transparent transparent $cl-blue;
-            border-bottom: 1px solid transparent;
+            border-bottom: 1px solid $cl-blue;
           }
           a {
             color: $cl-pretitle;
+            padding: 20px 0;
+            display: block;
             
             &:hover {
               color: $cl-link;
@@ -157,19 +159,19 @@ body {
 }
 
 .popover {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 0.95rem;
+  margin-bottom: 8px;
+  padding: 8px 15px;
 }
 
 .popover-header {
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
   border-bottom: 0;
 }
 
 .popover .arrow {
-  width: 1rem;
-  height: 0.5rem;
-  margin: 0 0.5rem;
+  width: 16px;
+  height: 8px;
+  margin: 0 8px;
 }
 
 .popover-body {
@@ -179,14 +181,14 @@ body {
 
 .popover-body-indicator {
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
 }
 
 .popover-body-label,
 .popover-body-value {
-  margin-left: 0.25rem;
+  margin-left: 4px;
   font-weight: 400;
   font-size: 13.5px;
 }
@@ -194,7 +196,7 @@ body {
 .popover-header {
   padding: 0;
   margin-bottom: 5px;
-  font-size: 0.9375rem;
+  font-size: 15px;
   background-color: $cl-white;
   border-bottom: 1px solid $cl-white;
   border-top-left-radius: calc(.5rem - 1px);
@@ -202,7 +204,8 @@ body {
 }
 
 //-------- Devices ------------
-.card-devices {
+.card-devices, 
+.card-performance {
   .card-header {
     padding-top: 0;
     padding-bottom: 0;
@@ -213,13 +216,7 @@ body {
       
       .tabs-item {
         line-height: 22.5px;
-        padding: 19px 0;
-      }
-      .tabs-item.active {
-        color: #12263f;
-        background-color: transparent;
-        border-bottom: 1px solid #2c7be5;
-        border-bottom: 1px solid transparent;
+        margin-right: 8px;
       }
     }
   }

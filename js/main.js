@@ -170,9 +170,6 @@ $(document).ready(function () {
             cutoutPercentage: 85,
             legend: {
               display:false
-            },
-            tooltips: {
-              
             }
           }
       });
@@ -181,61 +178,65 @@ $(document).ready(function () {
   }
 
   function chartPerformance(){
-    var ctx = document.getElementById('performanceChart').getContext('2d');
-    
-    var chart = new Chart( ctx, {
-      type: 'line',
-        options: {
-          elements: {
-            point:{
-              radius: 0
-            },
-        },
-          legend: {
-            display: false,
+
+    $('.js-performance-chart').each(function(){
+      var ctx = $(this);
+      dataSet = $(this).attr("datasets");
+      parseDataset = JSON.parse(dataSet); 
+      var chart = new Chart( ctx, {
+        type: 'line',
+          options: {
+            elements: {
+              point:{
+                radius: 0
+              },
           },
-          scales: {
-            yAxes: [{
-              gridLines: {
-                drawBorder: false,
-                borderDash: [2, 2],
-              },
-              ticks: {
-                beginAtZero: true,
-                callback: function(ctx) {
-                  if (!(ctx % 10)) return "$" +" " + ctx + "k"
-                },
-                fontColor: "#a9afb9",
-                scaleFontSize: 20
-              }
-            }],
-            xAxes: [{
-              barPercentage: 0.5,
-              barThickness: 30,
-              maxBarThickness: 10,
-              categoryPercentage: 9,
-              minBarLength: 2,
-              gridLines: {
-                offsetGridLines: false,
-                color: "#fff",
-              },
-              ticks: {
-                fontColor: "#a9afb9",
-                fontFamily: "Cerebri Sans",
-                scaleFontSize: 20,
-                lineDashType: "dash"
+            legend: {
+              display: false,
             },
-            }],
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  drawBorder: false,
+                  borderDash: [2, 2],
+                },
+                ticks: {
+                  beginAtZero: true,
+                  callback: function(ctx) {
+                    if (!(ctx % 10)) return "$" +" " + ctx + "k"
+                  },
+                  fontColor: "#a9afb9",
+                  scaleFontSize: 20
+                }
+              }],
+              xAxes: [{
+                barPercentage: 0.5,
+                barThickness: 30,
+                maxBarThickness: 10,
+                categoryPercentage: 9,
+                minBarLength: 2,
+                gridLines: {
+                  offsetGridLines: false,
+                  color: "#fff",
+                },
+                ticks: {
+                  fontColor: "#a9afb9",
+                  fontFamily: "Cerebri Sans",
+                  scaleFontSize: 20,
+                  lineDashType: "dash"
+              },
+              }],
+            }
+          },
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            datasets: [{
+              label: "Performance",
+              fill : false,
+              borderColor : "#2c7be5",
+              data: parseDataset['datasets']
+            }]
           }
-        },
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Performance",
-            fill : false,
-            borderColor : "#2c7be5",
-            data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
-          }]
-        }
-    });
+      });
+    })
   }

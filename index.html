@@ -499,16 +499,25 @@
                       <h4 class="card-header-title">Devices</h4>
                     </div>
                     <div class="col-auto">
-                      <ul class="card-header-tabs list-inline">
-                        <li class="tabs-item list-inline-item active"><a class="all-tab small" href="#!">All</a></li>
-                        <li class="tabs-item list-inline-item"><a class="direct-tab small" href="#!">Direct</a></li>
+                      <ul class="card-header-tabs nav nav-tabs" role="tablist">
+                        <li class="tabs-item"><a class="active small" href="#deviceChart1" role="tab" data-toggle="tab">All</a></li>
+                        <li class="tabs-item list-inline-item"><a class="direct-tab small" href="#deviceChart2" role="tab" data-toggle="tab">Direct</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="chart chart-appended">
-                    <canvas class="js-devices-chart" id="devicesChart" width="255" height="241" datasets="{&quot;datasets&quot;:[60,25,15]}"></canvas>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="deviceChart1">
+                      <div class="chart chart-appended">
+                        <canvas class="js-devices-chart" id="devicesChart" width="255" height="241" datasets="{&quot;datasets&quot;:[60,25,15]}"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="deviceChart2">
+                      <div class="chart chart-appended">
+                        <canvas class="js-devices-chart" id="devicesChart" width="255" height="241" datasets="{&quot;datasets&quot;:[15,45,20]}"></canvas>
+                      </div>
+                    </div>
                   </div>
                   <div class="chart-legend"><span class="chart-legend__item"><span class="icon-dot cl-desktop"><i class="fas fa-circle"></i></span>Desktop</span><span class="chart-legend__item"><span class="icon-dot cl-tablet"><i class="fas fa-circle"></i></span>Tablet</span><span class="chart-legend__item"><span class="icon-dot cl-mobile"><i class="fas fa-circle"></i></span>Mobile</span></div>
                 </div>
@@ -589,17 +598,31 @@
                       <h4 class="card-header-title">Performance</h4>
                     </div>
                     <div class="col-auto">
-                      <ul class="card-header-tabs list-inline">
-                        <li class="tabs-item list-inline-item"><a class="active all-tab small" href="#!">All</a></li>
-                        <li class="tabs-item list-inline-item"><a class="direct-tab small" href="#!">Direct</a></li>
-                        <li class="tabs-item list-inline-item"><a class="direct-tab small" href="#!">Originic</a></li>
+                      <ul class="card-header-tabs nav nav-tabs" role="tablist">
+                        <li class="tabs-item"><a class="active small" href="#performanceChart1" role="tab" data-toggle="tab">All</a></li>
+                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart2" role="tab" data-toggle="tab">Direct</a></li>
+                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart3" role="tab" data-toggle="tab">Origanic</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="chart chart-appended">
-                    <canvas class="js-performance-chart" id="performanceChart" width="585" height="300"></canvas>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="performanceChart1">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[0,10,5,15,10,20,15,25,20,30,25,40]}"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="performanceChart2">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[25,20,30,22,17,10,18,26,28,26,20,32]}"></canvas>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="performanceChart3">
+                      <div class="chart chart-appended">
+                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[25,10,20,10,17,10,18,20,35,25,20,32]}"></canvas>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
