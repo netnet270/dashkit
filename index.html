@@ -500,8 +500,8 @@
                     </div>
                     <div class="col-auto">
                       <ul class="card-header-tabs nav nav-tabs" role="tablist">
-                        <li class="tabs-item"><a class="active small" href="#deviceChart1" role="tab" data-toggle="tab">All</a></li>
-                        <li class="tabs-item list-inline-item"><a class="direct-tab small" href="#deviceChart2" role="tab" data-toggle="tab">Direct</a></li>
+                        <li class="tabs-item"><a class="active small" href="#deviceChart1" role="tab" data-toggle="tab" data-datasets="[60, 25, 15]">All</a></li>
+                        <li class="tabs-item list-inline-item"><a class="small" href="#deviceChart1" role="tab" data-toggle="tab" data-datasets="[15, 45, 20]">Direct</a></li>
                       </ul>
                     </div>
                   </div>
@@ -510,12 +510,7 @@
                   <div class="tab-content">
                     <div class="tab-pane active" id="deviceChart1">
                       <div class="chart chart-appended">
-                        <canvas class="js-devices-chart" id="devicesChart" width="255" height="241" datasets="{&quot;datasets&quot;:[60,25,15]}"></canvas>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="deviceChart2">
-                      <div class="chart chart-appended">
-                        <canvas class="js-devices-chart" id="devicesChart" width="255" height="241" datasets="{&quot;datasets&quot;:[15,45,20]}"></canvas>
+                        <canvas class="js-devices-chart" id="devicesChart" width="255" height="241"></canvas>
                       </div>
                     </div>
                   </div>
@@ -599,9 +594,9 @@
                     </div>
                     <div class="col-auto">
                       <ul class="card-header-tabs nav nav-tabs" role="tablist">
-                        <li class="tabs-item"><a class="active small" href="#performanceChart1" role="tab" data-toggle="tab">All</a></li>
-                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart2" role="tab" data-toggle="tab">Direct</a></li>
-                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart3" role="tab" data-toggle="tab">Origanic</a></li>
+                        <li class="tabs-item"><a class="active small" href="#performanceChart1" role="tab" data-toggle="tab" data-datasets="[0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]">All</a></li>
+                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart1" role="tab" data-toggle="tab" data-datasets="[7, 35, 12, 27, 34, 17, 19, 30, 28, 32, 24, 39]">Direct</a></li>
+                        <li class="tabs-item list-inline-item"><a class="small" href="#performanceChart1" role="tab" data-toggle="tab" data-datasets="[2, 12, 35, 25, 36, 25, 34, 16, 4, 14, 15, 37]">Origanic</a></li>
                       </ul>
                     </div>
                   </div>
@@ -610,17 +605,7 @@
                   <div class="tab-content">
                     <div class="tab-pane active" id="performanceChart1">
                       <div class="chart chart-appended">
-                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[0,10,5,15,10,20,15,25,20,30,25,40]}"></canvas>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="performanceChart2">
-                      <div class="chart chart-appended">
-                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[25,20,30,22,17,10,18,26,28,26,20,32]}"></canvas>
-                      </div>
-                    </div>
-                    <div class="tab-pane" id="performanceChart3">
-                      <div class="chart chart-appended">
-                        <canvas class="js-performance-chart" id="performanceChart" width="585" height="300" datasets="{&quot;datasets&quot;:[25,10,20,10,17,10,18,20,35,25,20,32]}"></canvas>
+                        <canvas id="performanceChart" width="585" height="300"></canvas>
                       </div>
                     </div>
                   </div>
@@ -646,7 +631,7 @@
                         <th><a class="text-muted sort" href="#!" data-sort="goal-project">Goal</a></th>
                         <th><a class="text-muted sort" href="#!" data-sort="goal-status">Status</a></th>
                         <th><a class="text-muted sort" href="#!" data-sort="goal-progress">Progress</a></th>
-                        <th><a class="text-muted sort" href="#!" data-sort="goal-date">Due date</a></th>
+                        <th><a class="text-muted sort" href="#!" data-sort="goal-date">Date</a></th>
                         <th class="text-right">Team</th>
                         <th class="text-right"></th>
                       </tr>
@@ -754,10 +739,9 @@
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"> </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://dashkit.goodthemes.co/assets/libs/chart.js/Chart.extension.min.js"></script>
   <script src="js/main.js" type="text/javascript"> </script>
