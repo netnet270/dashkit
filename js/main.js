@@ -145,6 +145,51 @@ $(document).ready(function () {
         cutoutPercentage: 85,
         legend: {
           display: false
+        },
+        tooltips: {
+          enabled: false,
+          mode: "index",
+          intersect: false,
+          custom: function (r) {
+            var a = $("#chart-tooltip");
+            if (a.length || (a = $('<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"></div>'), $("body").append(a)), 0 !== r.opacity) {
+              if (r.body) {
+                var e = r.title || [],
+                  l = r.body.map(function (a) {
+                    return a.lines
+                  }),
+                  n = "";
+                n += '<div class="arrow"></div>', e.forEach(function (a) {
+                  n += '<h3 class="popover-header text-center">' + a + "</h3>"
+                }), l.forEach(function (a, e) {
+                  var t = '<span class="popover-body-indicator" style="background-color: ' + r.labelColors[e].backgroundColor + '"></span>',
+                    o = 1 < l.length ? "justify-content-left" : "justify-content-center";
+                  n += '<div class="popover-body d-flex align-items-center ' + o + '">' + t + a + "</div>"
+                }), a.html(n)
+              }
+              var t = $(this._chart.canvas),
+                o = (t.outerWidth(), t.outerHeight(), t.offset().top),
+                s = t.offset().left,
+                i = a.outerWidth(),
+                c = a.outerHeight(),
+                d = o + r.caretY - c - 16,
+                u = s + r.caretX - i / 2;
+              a.css({
+                top: "calc(" + d + "px - 1.5%)",
+                left: u + "px",
+                display: "block"
+              })
+            } else a.css("display", "none")
+          },
+          callbacks: {
+            title: function (a, e) {
+              return e.labels[a[0].index]
+            },
+            label: function (a, e) {
+              var t = "";
+              return t += '<span class="popover-body-value">' + e.datasets[0].data[a.index] + "%</span>"
+            }
+          }
         }
       }
     });
@@ -208,6 +253,55 @@ $(document).ready(function () {
               lineDashType: "dash"
             },
           }],
+        },
+        tooltips: {
+          enabled: false,
+          mode: "index",
+          intersect: false,
+          custom: function (r) {
+            var a = $("#chart-tooltip");
+            if (a.length || (a = $('<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"></div>'), $("body").append(a)), 0 !== r.opacity) {
+              if (r.body) {
+                var e = r.title || [],
+                  l = r.body.map(function (a) {
+                    return a.lines
+                  }),
+                  n = "";
+                n += '<div class="arrow"></div>', e.forEach(function (a) {
+                  n += '<h3 class="popover-header text-center">' + a + "</h3>"
+                }), l.forEach(function (a, e) {
+                  var t = '<span class="popover-body-indicator" style="background-color: ' + r.labelColors[e].backgroundColor + '"></span>',
+                    o = 1 < l.length ? "justify-content-left" : "justify-content-center";
+                  n += '<div class="popover-body d-flex align-items-center ' + o + '">' + t + a + "</div>"
+                }), a.html(n)
+              }
+              var t = $(this._chart.canvas),
+                o = (t.outerWidth(), t.outerHeight(), t.offset().top),
+                s = t.offset().left,
+                i = a.outerWidth(),
+                c = a.outerHeight(),
+                d = o + r.caretY - c - 16,
+                u = s + r.caretX - i / 2;
+              a.css({
+                top: "calc(" + d + "px - 1.5%)",
+                left: u + "px",
+                display: "block"
+              })
+            } else a.css("display", "none")
+          },
+          callbacks: {
+            label: function (a, e) {
+              var t = e.datasets[a.datasetIndex].label || "",
+                o = a.yLabel,
+                r = "";
+              return 1 < e.datasets.length && (r += '<span class="popover-body-label mr-auto">' + t + "</span>"), r += '<span class="popover-body-value">$' + o + "k</span>"
+            },
+            labelColor: function (tooltipItem, chart) {
+              return {
+                backgroundColor: '#2C7BE5'
+              }
+            }
+          }
         }
       },
       data: {
