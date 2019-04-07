@@ -340,7 +340,7 @@ body {
         font-size: 10px;
         color: $cl-pretitle;
         letter-spacing: 0.8px;
-        border-bottom: 2px solid $border-card;
+        border-bottom: 2px solid $border-table;
       }
       td {
         font-size: 13px;
@@ -387,6 +387,26 @@ body {
         }
       }
     }
+  }
+  //-custom scroll 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $cl-light-blue; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $cl-blue; 
   }
 }
 

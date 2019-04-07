@@ -4,6 +4,27 @@
   max-width: 350px;
   margin: 0;
   transition: transform .3s ease-out;
+
+  //-custom scroll 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $cl-light-blue; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $cl-blue; 
+  }
 }
 
 .modal-body {
